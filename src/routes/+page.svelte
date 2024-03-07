@@ -15,6 +15,6 @@
     width: 100vw;
     height: 100vh;
     background: rgb(89, 113, 158);
-    background: linear-gradient(180deg, rgb(59, 95, 173) 0%, rgb(158, 128, 62) 100%);
+    background: linear-gradient(180deg, rgb(59, 95, 173) 0%, rgb(4, 8, 28) 100%);
   }
 </style>
