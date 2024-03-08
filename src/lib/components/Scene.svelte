@@ -5,10 +5,15 @@
 
   export let rotateSpeed: number
   export let zoomSpeed: number
+  export let scale: number
+  export let rotx: number
+  export let roty: number
+  export let rotz: number
 </script>
 
 <T.PerspectiveCamera
   makeDefault
+  poition=static
   position={[-10, 10, 10]}
   fov={6}
 >
@@ -69,7 +74,8 @@
     url="./models/earth8k.glb"
     interactive
     position={[0, 0, 0]}
-    scale={0.3}
+    rotation={[rotx, roty, rotz]}
+    {scale}
     castShadow
     receiveShadow
 />
