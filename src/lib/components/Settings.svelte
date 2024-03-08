@@ -4,6 +4,10 @@
 
     export let rotateSpeed: number
     export let zoomSpeed: number
+    export let scale: number
+    export let rotx: number
+    export let roty: number
+    export let rotz: number
 
   </script>
   
@@ -40,6 +44,34 @@
       bind:value={zoomSpeed}
       min={0}
       max={2}
+      step={0.1}
+    />
+    <Slider
+      label="Scale"
+      bind:value={scale}
+      min={-1}
+      max={1}
+      step={0.01}
+    />    
+    <Slider
+      label="Rotation X"
+      bind:value={rotx}
+      min={-10}
+      max={10}
+      step={0.1}
+    />
+    <Slider
+      label="Rotation Y"
+      bind:value={roty}
+      min={-10}
+      max={10}
+      step={0.1}
+    />
+    <Slider
+      label="Rotation Z"
+      bind:value={rotz}
+      min={-10}
+      max={10}
       step={0.1}
     />
     <!-- <Slider
