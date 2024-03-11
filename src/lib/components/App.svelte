@@ -4,7 +4,7 @@
   import Settings from './Settings.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  let rotateSpeed: number = 0.8
+  let rotateSpeed: number = 1
   let zoomSpeed: number = 0.3
   let scale: number = -0.3
   let rotx: number = 2.9
