@@ -2,6 +2,8 @@
   import App from '$lib/components/App.svelte'
 </script>
 
+<a href="./about">about</a>
+
 <div>
   <App />
 </div>
@@ -24,5 +26,15 @@
     height: 100vh;
     background: rgb(7, 19, 42);
     background: radial-gradient(180deg, rgb(0, 0, 0) 0%, rgb(4, 8, 28) 100%);
+  }
+
+  a {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(7, 19, 42);
+    background: radial-gradient(180deg, rgb(0, 0, 0) 0%, rgb(4, 8, 28) 100%);
+    text-decoration: none;
+    color: white;
+    font-style: oblique;
   }
 </style>
