@@ -16,25 +16,30 @@
 <T.PerspectiveCamera
   makeDefault
   poition=static
-  position={[-10, 10, 10]}
+  position={[-10, 0, 10]}
   fov={5}
   enableZoom={1}
 >
-  <!-- <OrbitControls
-    autoRotate
+
+    <!-- autoRotate -->
+  <OrbitControls
     enableZoom={false}
     enableDamping
     autoRotateSpeed={0.5}
-    target.y={1.8}
-  /> -->
+    target={[0, 0, 0]}
+    {rotateSpeed}
+    {zoomSpeed}
+    {minPolarAngle}
+    {maxPolarAngle}
+  />
 
-  <TrackballControls
+  <!-- <TrackballControls
     {minPolarAngle}
     {maxPolarAngle}
     {rotateSpeed}
     {zoomSpeed}
     target.y={0}
-  />
+  /> -->
 
 </T.PerspectiveCamera>
 
@@ -75,8 +80,18 @@
   </T.Mesh> -->
 </Float>
 
-<Extra.GLTF
+<!-- <Extra.GLTF
     url="./models/earth8k.glb"
+    interactive
+    position={[0, 0, 0]}
+    rotation={[rotx, roty, rotz]}
+    {scale}
+    castShadow
+    receiveShadow
+/> -->
+
+<Extra.GLTF
+    url="./models/RomerikeMap2WrappedCylindrical.glb"
     interactive
     position={[0, 0, 0]}
     rotation={[rotx, roty, rotz]}
