@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { T } from '@threlte/core'
-  import { ContactShadows, Float, Grid, OrbitControls, Gizmo, TrackballControls } from '@threlte/extras'
+  import { T, useTask } from '@threlte/core'
+  import { ContactShadows, Float, Grid, OrbitControls, Gizmo, TrackballControls, Mask, useMask } from '@threlte/extras'
   import * as Extra from '@threlte/extras'
+
+  let Stencil: any = useMask(0)
 
   export let rotateSpeed: number
   export let zoomSpeed: number
@@ -9,14 +11,29 @@
   export let rotx: number
   export let roty: number
   export let rotz: number
-  export let minPolarAngle: number
+  export let minPolarAngle: number 
   export let maxPolarAngle: number
 </script>
+
+<T.Group
+  makeDefault
+  position={[0, 0, 0.469]}
+  let:ref
+>
+  <Mask>
+    <T.CircleGeometry args={[0.22]} />
+    <T.MeshBasicMaterial />
+  </Mask>
+  <T.Mesh>
+    <T.RingGeometry args={[0.22, 0.22, 56]} />
+    <T.MeshBasicMaterial />
+  </T.Mesh>
+</T.Group>
 
 <T.PerspectiveCamera
   makeDefault
   poition=static
-  position={[-10, 0, 10]}
+  position={[0, 0, 14]}
   fov={5}
   enableZoom={1}
 >
@@ -44,12 +61,12 @@
 
 </T.PerspectiveCamera>
 
-<T.DirectionalLight
-  intensity={4.8}
-  position.x={-10}
-  position.y={10}
-/>
-<T.AmbientLight intensity={2} />
+
+<!-- <T.DirectionalLight
+  intensity={2.8}
+  position={[-20, 10, 20]}
+/> -->
+<T.AmbientLight intensity={3  } />
 
 <!-- <Grid
   position.y={-0.001}
@@ -91,12 +108,29 @@
     receiveShadow
 /> -->
 
-<Extra.GLTF
-    url="./models/RomerikeMap2WrappedCylindrical.glb"
-    interactive
+<T.Mesh>
+  <Extra.GLTF
+  url="./models/RomerikeMap2WrappedCylindrical.glb"
+  interactive
+  position={[0, 0.02, 0]}
+  rotation={[rotx, roty, rotz]}
+  {scale}
+  castShadow
+  receiveShadow
+  />
+  <T.MeshStandardMaterial
+    color="#000000"
+    {...Stencil}
+  />  
+</T.Mesh>
+
+<T.Mesh
     position={[0, 0, 0]}
-    rotation={[rotx, roty, rotz]}
-    {scale}
-    castShadow
-    receiveShadow
-/>
+    scale={0.6}
+  >
+    <T.CylinderGeometry args={[0.65, 0.65, 10, 100]}/>
+    <T.MeshStandardMaterial
+      color="#F8EBCE"
+      {...Stencil}
+    />
+  </T.Mesh>

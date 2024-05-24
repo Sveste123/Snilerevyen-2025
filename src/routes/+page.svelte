@@ -2,7 +2,7 @@
   import App from '$lib/components/App.svelte'
 </script>
 
-<a href="./about">about</a>
+<!-- <a href="./about">about</a> -->
 
 <div>
   <App />
