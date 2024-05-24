@@ -5,7 +5,7 @@
   // import Renderer  from './Renderer.svelte'
 
   let rotateSpeed: number = 1
-  let zoomSpeed: number = 0.3
+  let zoomSpeed: number = 0.2
   let scale: number = 0.11
   let rotx: number = 0
   let roty: number = 0
