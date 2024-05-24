@@ -10,8 +10,8 @@
   let rotx: number = 0
   let roty: number = 0
   let rotz: number = 0
-  let minPolarAngle: number = 0
-  let maxPolarAngle: number = Math.PI
+  let minPolarAngle: number = 1.5
+  let maxPolarAngle: number = 1.4
 
 
   // let rendererParameters = {
