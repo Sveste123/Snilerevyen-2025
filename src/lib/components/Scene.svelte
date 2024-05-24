@@ -9,13 +9,16 @@
   export let rotx: number
   export let roty: number
   export let rotz: number
+  export let minPolarAngle: number
+  export let maxPolarAngle: number
 </script>
 
 <T.PerspectiveCamera
   makeDefault
   poition=static
   position={[-10, 10, 10]}
-  fov={6}
+  fov={5}
+  enableZoom={1}
 >
   <!-- <OrbitControls
     autoRotate
@@ -26,6 +29,8 @@
   /> -->
 
   <TrackballControls
+    {minPolarAngle}
+    {maxPolarAngle}
     {rotateSpeed}
     {zoomSpeed}
     target.y={0}

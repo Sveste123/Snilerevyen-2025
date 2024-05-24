@@ -10,6 +10,9 @@
   let rotx: number = 2.9
   let roty: number = 0.2
   let rotz: number = 0.5
+  let minPolarAngle: number = 0
+  let maxPolarAngle: number = Math.PI
+
 
   // let rendererParameters = {
   //   antialias: true, // Enable antialiasing
@@ -30,6 +33,8 @@
   {rotx}
   {roty}
   {rotz}
+  {minPolarAngle}
+  {maxPolarAngle}
   />
 </Canvas>
 
@@ -40,4 +45,6 @@
   bind:rotx
   bind:roty
   bind:rotz
+  bind:minPolarAngle
+  bind:maxPolarAngle
 />

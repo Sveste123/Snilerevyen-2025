@@ -8,6 +8,8 @@
     export let rotx: number
     export let roty: number
     export let rotz: number
+    export let minPolarAngle: number
+    export let maxPolarAngle: number
 
   </script>
   
@@ -74,7 +76,7 @@
       max={10}
       step={0.1}
     />
-    <!-- <Slider
+    <Slider
       label="minPolarAngle"
       bind:value={minPolarAngle}
       min={0}
@@ -87,6 +89,6 @@
       min={0}
       max={Math.PI}
       step={0.1}
-    /> -->
+    />
   </Pane>
   
