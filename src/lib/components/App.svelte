@@ -6,7 +6,7 @@
 
   let rotateSpeed: number = 1
   let zoomSpeed: number = 0.2
-  let scale: number = 0.11
+  let scale: number = 0.09
   let rotx: number = 0
   let roty: number = 0
   let rotz: number = 0

@@ -25,6 +25,7 @@
   <OrbitControls
     enableZoom={false}
     enableDamping
+    enablePan={false}
     autoRotateSpeed={0.5}
     target={[0, 0, 0]}
     {rotateSpeed}
