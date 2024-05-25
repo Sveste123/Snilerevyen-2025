@@ -5,7 +5,7 @@
   import Settings from './Settings.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  let rotateSpeed: number = 1.9  //  Trackball: 2.8  -  OB: 0.4
+  let rotateSpeed: number = 0.4  //  Trackball: 2.8  -  OB: 0.4
   let zoomSpeed: number = 0
   let scale: number = 0.081 // TB: 0.071  -  OB: 0.07
   let rotx: number = 0
