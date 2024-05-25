@@ -24,17 +24,20 @@
   div {
     width: 100vw;
     height: 100vh;
-    background: rgb(7, 19, 42);
-    background: radial-gradient(180deg, rgb(0, 0, 0) 0%, rgb(4, 8, 28) 100%);
+    background: rgb(0, 0, 0);
+    background: radial-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   }
 
   a {
     width: 100vw;
     height: 100vh;
     background: rgb(7, 19, 42);
-    background: radial-gradient(180deg, rgb(0, 0, 0) 0%, rgb(4, 8, 28) 100%);
+    background: radial-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     text-decoration: none;
     color: white;
     font-style: oblique;
   }
 </style>
+
+<!-- rgb(4, 8, 28) 100%);
+background: rgb(7, 19, 42); -->

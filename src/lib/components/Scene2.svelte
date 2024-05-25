@@ -4,7 +4,7 @@
     import * as Extra from '@threlte/extras'
     import { Group } from 'three';
 
-    let facey = any.getPolarAngle()
+    // let facey = any.getPolarAngle()
   
 </script>
 

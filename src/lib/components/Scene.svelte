@@ -12,8 +12,8 @@
   export let rotx: number
   export let roty: number
   export let rotz: number
-  export let minPolarAngle: number 
-  export let maxPolarAngle: number
+  // export let minPolarAngle: number 
+  // export let maxPolarAngle: number
 </script>
 
 <T.PerspectiveCamera
@@ -22,26 +22,24 @@
   fov={5}
   enableZoom={1}
 >
-  <OrbitControls
+  <TrackballControls
     enableZoom={false}
-    enableDamping={true}
+    enableDamping={false}
     enablePan={false}
     autoRotateSpeed={0.5}
-    target={[0, -0.06, 0]}
+    target={[0, 0, 0]}
     rotateSpeed={rotateSpeed}
     zoomSpeed={zoomSpeed}
-    minPolarAngle={minPolarAngle}
-    maxPolarAngle={maxPolarAngle}
   />
 
   <!-- {/* Mask as a child of the camera */} -->
-  <T.Group position={[0, 0, -13.431]}>
+  <T.Group position={[0, 0, -13]}>
     <Mask>
-      <T.CircleGeometry args={[0.22]} />
+      <T.CircleGeometry args={[0.36]} />
       <T.MeshBasicMaterial />
     </Mask>
     <T.Mesh>
-      <T.RingGeometry args={[0.219, 0.22, 56]} />
+      <T.RingGeometry args={[0.357, 0.36, 80]} />
       <T.MeshBasicMaterial />
     </T.Mesh>
   </T.Group>
@@ -98,7 +96,7 @@
 
 <T.Mesh>
   <Extra.GLTF
-  url="./models/RomerikeMap2WrappedCylindrical.glb"
+  url="./models/RomerikeMap2WrappedSpherical.glb"
   interactive
   position={[0, 0, 0]}
   rotation={[rotx, roty, rotz]}
@@ -110,9 +108,9 @@
 
 <T.Mesh
     position={[0, 0, 0]}
-    scale={0.6}
+    scale={0.7}
   >
-    <T.CylinderGeometry args={[0.65, 0.65, 10, 100]}/>
+    <T.SphereGeometry args={[1, 64, 90]}/>
     <T.MeshStandardMaterial
       color="black"
       {...Stencil}

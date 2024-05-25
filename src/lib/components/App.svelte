@@ -5,11 +5,11 @@
   import Settings from './Settings.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  let rotateSpeed: number = 0.4
-  let zoomSpeed: number = 0.2
-  let scale: number = 0.087
+  let rotateSpeed: number = 1.9  //  Trackball: 2.8  -  OB: 0.4
+  let zoomSpeed: number = 0
+  let scale: number = 0.081 // TB: 0.071  -  OB: 0.07
   let rotx: number = 0
-  let roty: number = 0
+  let roty: number = 4.06
   let rotz: number = 0
   let minPolarAngle: number = 1.5
   let maxPolarAngle: number = 1.4
@@ -38,8 +38,6 @@
   {rotx}
   {roty}
   {rotz}
-  {minPolarAngle}
-  {maxPolarAngle}
   />
 </Canvas>
 
@@ -48,7 +46,7 @@
   />
 </Canvas> -->
 
-<Settings
+<!-- <Settings
   bind:rotateSpeed
   bind:zoomSpeed
   bind:scale
@@ -57,4 +55,4 @@
   bind:rotz
   bind:minPolarAngle
   bind:maxPolarAngle
-/>
+/> -->
