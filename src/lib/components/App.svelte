@@ -46,7 +46,7 @@
   />
 </Canvas> -->
 
-<!-- <Settings
+<Settings
   bind:rotateSpeed
   bind:zoomSpeed
   bind:scale
@@ -55,4 +55,4 @@
   bind:rotz
   bind:minPolarAngle
   bind:maxPolarAngle
-/> -->
+/>
