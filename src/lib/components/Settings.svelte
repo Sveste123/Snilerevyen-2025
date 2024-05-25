@@ -10,7 +10,6 @@
     export let rotz: number
     export let minPolarAngle: number
     export let maxPolarAngle: number
-
   </script>
   
   <Pane

@@ -1,10 +1,11 @@
 <script lang="ts">
   import { Canvas } from '@threlte/core'
   import Scene from './Scene.svelte'
+  import Scene2 from './Scene2.svelte'
   import Settings from './Settings.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  let rotateSpeed: number = 1
+  let rotateSpeed: number = 0.4
   let zoomSpeed: number = 0.2
   let scale: number = 0.087
   let rotx: number = 0
@@ -26,6 +27,10 @@
 
 <Canvas>
   <!-- <Renderer /> -->
+
+  <!-- <Scene2
+  /> -->
+
   <Scene 
   {rotateSpeed}
   {zoomSpeed}
@@ -37,6 +42,11 @@
   {maxPolarAngle}
   />
 </Canvas>
+
+<!-- <Canvas>
+  <Scene2
+  />
+</Canvas> -->
 
 <Settings
   bind:rotateSpeed
