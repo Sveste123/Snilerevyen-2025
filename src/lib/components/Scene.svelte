@@ -1,118 +1,104 @@
 <script lang="ts">
   import { T, useTask } from '@threlte/core'
-  import { ContactShadows, Float, Grid, OrbitControls, Gizmo, TrackballControls, Mask, useMask } from '@threlte/extras'
+  import { Text3DGeometry, ContactShadows, Float, Grid, OrbitControls, Gizmo, TrackballControls, Mask, useMask, MeshLineGeometry, MeshLineMaterial } from '@threlte/extras'
   import * as Extra from '@threlte/extras'
-	import { Group } from 'three';
-
-  let Stencil: any = useMask(0)
-
+	import { BoxGeometry, Group, MeshBasicMaterial } from 'three';
+  // import * as Utils from 'three/src/math/MathUtils'
+  import { interactivity, Text, useCursor } from '@threlte/extras'
+  // import { DEG2RAD } from 'three/src/math/MathUtils'
   export let rotateSpeed: number
   export let zoomSpeed: number
-  export let scale: number
   export let rotx: number
   export let roty: number
   export let rotz: number
+  export let camx: [number, number, number] // camx is an array
+  export let target: [number, number, number] // target is also an array
+  export let selection: [number, number, number]
+
   // export let minPolarAngle: number 
   // export let maxPolarAngle: number
+  $: color = '#FE3D00'
 </script>
 
 <T.PerspectiveCamera
   makeDefault
-  position={[0, 0, 14]}
-  fov={5}
-  enableZoom={1}
->
-  <TrackballControls
+  position={selection}
+  fov={90}
+  enableZoom={0}
+  >
+
+  <OrbitControls
     enableZoom={false}
     enableDamping={false}
     enablePan={false}
     autoRotateSpeed={0.5}
-    target={[0, 0, 0]}
+    target={target}
     rotateSpeed={rotateSpeed}
     zoomSpeed={zoomSpeed}
+    maxPolarAngle={1.6}
+    minPolarAngle={0.75}
   />
 
-  <!-- {/* Mask as a child of the camera */} -->
-  <T.Group position={[0, 0, -13]}>
-    <Mask>
-      <T.CircleGeometry args={[0.36]} />
-      <T.MeshBasicMaterial />
-    </Mask>
-    <T.Mesh>
-      <T.RingGeometry args={[0.357, 0.36, 80]} />
-      <T.MeshBasicMaterial />
-    </T.Mesh>
-  </T.Group>
 </T.PerspectiveCamera>
 
-
-
-
-<!-- <T.DirectionalLight
-  intensity={2.8}
-  position={[-20, 10, 20]}
-/> -->
-<T.AmbientLight intensity={3} />
-
-<!-- <Grid
-  position.y={-0.001}
-  cellColor="#ffffff"
-  sectionColor="#ffffff"
-  sectionThickness={0}
-  fadeDistance={25}
-  cellSize={2}
-/> -->
-
-<ContactShadows
-  scale={10}
-  blur={2}
-  far={2.5}
-  opacity={0.5}
+<T.AmbientLight intensity={3} 
+  position={[5, 0, 5]}
+/>
+<T.DirectionalLight intensity={1} 
+  position={[10, 10, 10]}
 />
 
-<!-- <Float
-  floatIntensity={10}
-  floatingRange={[0, 0.01]}
->
-  <T.Mesh
-    position={[0, 0, 0]}
-    rotation={[-5, 128, 10]}
-    scale={0.7}
-  >
-    <T.SphereGeometry/>
-    <T.MeshStandardMaterial color="#F8EBCE" />
-  </T.Mesh>
-</Float> -->
+<ContactShadows
+  scale={1}
+  blur={20}
+  far={1}
+  opacity={1}
+/>
 
-<!-- <Extra.GLTF
-    url="./models/earth8k.glb"
-    interactive
-    position={[0, 0, 0]}
-    rotation={[rotx, roty, rotz]}
-    {scale}
-    castShadow
-    receiveShadow
-/> -->
+<Text
+  text="1MDA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-0.2, -1, -3]}
+  color=white
+/>
 
 <T.Mesh>
   <Extra.GLTF
-  url="./models/RomerikeMap2WrappedSpherical.glb"
+  url="./models/DoneAula.glb"
   interactive
-  position={[0, 0, 0]}
+  position={[0, -1.4, -7]}
   rotation={[rotx, roty, rotz]}
-  {scale}
-  castShadow
-  receiveShadow
+  scale={0.3}
   />
 </T.Mesh>
 
-<T.Mesh
-    position={[0, 0, 0]}
-    scale={0.7}
-  >
-    <T.SphereGeometry args={[1, 64, 90]}/>
-    <T.MeshStandardMaterial
-      color="black"
-      {...Stencil}
+<T.Mesh position={[-0.285, -1.3, -3.7]}>
+  <T.BoxGeometry args={[11, 0.1, 0.1]} />
+  <T.MeshBasicMaterial color=red />
+</T.Mesh>
+
+<T.Mesh position={[-2.85, 1.7, -5.7]}>
+  <Text3DGeometry
+    text="Velkommen til
+Oppstartskonsert"
+    bevelEnabled = {true}
+    bevelOffset = {0}
+    bevelSegments = {20}
+    bevelSize = {0.03}
+    bevelThickness = {0.07}
+    curveSegments = {12}
+    height = {0.005}
+    size = {0.5}
+    smooth = {0.1}
     />
+  <T.MeshStandardMaterial
+    color="#00FFFF"
+    toneMapped={false}
+    metalness={0.4}
+    roughness={1.0}
+  />
 </T.Mesh>
