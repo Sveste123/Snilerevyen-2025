@@ -80,7 +80,7 @@
     justify-content: center; /* Sentrer horisontalt */
     align-items: center; /* Sentrer vertikalt */
     height: 100vh; /* Fyll hele høyden av visningsporten */
-    background: rgb(106, 46, 46); /* Bakgrunnsfarge */
+    background: rgb(45, 37, 82); /* Bakgrunnsfarge */
   }
 </style>
 

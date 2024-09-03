@@ -23,7 +23,7 @@
 <T.PerspectiveCamera
   makeDefault
   position={selection}
-  fov={90}
+  fov={100}
   enableZoom={0}
   >
 
@@ -86,7 +86,7 @@
   color=white
 />
 
-
+<!-- if selection[0] > 0 or selection[0] < 0: -->
 <T.Mesh>
   <Extra.GLTF
   url="./models/DoneAula.glb"

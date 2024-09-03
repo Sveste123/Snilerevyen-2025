@@ -7,7 +7,7 @@
 	import Page from '../../routes/+page.svelte';
   // import Renderer  from './Renderer.svelte'
 
-  let rotateSpeed: number = -0.3  //  Trackball: 2.8  -  OB: 0.4
+  let rotateSpeed: number = 0.3  //  Trackball: 2.8  -  OB: 0.4
   let zoomSpeed: number = 0
   let scale: number = 0 // TB: 0.071  -  OB: 0.07
   let rotx: number = 0
@@ -16,7 +16,7 @@
   let minPolarAngle: number = 0
   let maxPolarAngle: number = 0.1
   let camx: [number, number, number] = [0, 0, 4] // Initialize camx as an array
-  let target: [number, number, number] = [0, 0, -8] // Calculate target based on camx with a slight offset in z
+  let target: [number, number, number] = [0, 0, -7] // Calculate target based on camx with a slight offset in z
   let selection: [number, number, number] = [0, 0, 6]
 
   // let rendererParameters = {
