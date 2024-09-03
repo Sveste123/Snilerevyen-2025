@@ -36,7 +36,7 @@
     rotateSpeed={rotateSpeed}
     zoomSpeed={zoomSpeed}
     maxPolarAngle={1.6}
-    minPolarAngle={0.75}
+    minPolarAngle={1.25}
   />
 
 </T.PerspectiveCamera>
@@ -56,15 +56,36 @@
 />
 
 <Text
+  text="1MKA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-3.5, -1.25, -3]}
+  color=white
+/>
+<Text
   text="1MDA"
   interactive
   fontSize={0.45}
   anchorY="100%"
   anchorX="50%"
   rotation.x={-1.57}
-  position={[-0.2, -1, -3]}
+  position={[-0.2, -1.25, -3]}
   color=white
 />
+<Text
+  text="1MDBC"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[3.1, -1.25, -3]}
+  color=white
+/>
+
 
 <T.Mesh>
   <Extra.GLTF

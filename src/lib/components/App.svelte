@@ -16,7 +16,7 @@
   let minPolarAngle: number = 0
   let maxPolarAngle: number = 0.1
   let camx: [number, number, number] = [0, 0, 4] // Initialize camx as an array
-  let target: [number, number, number] = [0, 0, -3] // Calculate target based on camx with a slight offset in z
+  let target: [number, number, number] = [0, 0, -8] // Calculate target based on camx with a slight offset in z
   let selection: [number, number, number] = [0, 0, 6]
 
   // let rendererParameters = {

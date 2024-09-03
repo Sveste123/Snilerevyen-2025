@@ -15,10 +15,12 @@
     import { List, type ListOptions } from 'svelte-tweakpane-ui';
 
     const options: ListOptions<[number, number, number]> = {
-      "1MDA": [2, 0, 2],
-      "2MDA": [1, 0, 1],
-      "3MDA": [3, 0, 3],
-      "1MKA": [3, 0, 3],
+      "1MDA": [-0.2, 0, -3],
+      "2MDA": [-0.2, 0, -3],
+      "1MDBC": [3.1, 0, -3],
+      "2MDBC": [3.1, 0, -3],
+      "3MDBC": [3.1, 0, 3],
+      "1MKA": [-3.5, 0, -3],
       "2MKA": [3, 0, 3],
       "3MKA": [3, 0, 3],
       "1STA": [3, 0, 3],
