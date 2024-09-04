@@ -23,7 +23,7 @@
 <T.PerspectiveCamera
   makeDefault
   position={selection}
-  fov={100}
+  fov={120}
   enableZoom={0}
   >
 
@@ -32,12 +32,12 @@
     enableDamping={false}
     enablePan={false}
     autoRotateSpeed={0.5}
-    target={target}
+    target={[selection[0], selection[1], selection[2]-0.0000001]}
     rotateSpeed={rotateSpeed}
     zoomSpeed={zoomSpeed}
-    maxPolarAngle={1.6}
-    minPolarAngle={1.25}
   />
+    <!-- maxPolarAngle={1.6}
+    minPolarAngle={1.25} -->
 
 </T.PerspectiveCamera>
 
@@ -83,6 +83,162 @@
   anchorX="50%"
   rotation.x={-1.57}
   position={[3.1, -1.25, -3]}
+  color=white
+/>
+
+<Text
+  text="2IBA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-3.5, -1.25, -1]}
+  color=white
+/>
+<Text
+  text="2MKA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-0.2, -1.25, -1]}
+  color=white
+/>
+<Text
+  text="3MDBC"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[3.1, -1.25, -1]}
+  color=white
+/>
+
+<Text
+  text="3IBA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-3.5, -1.25, 1]}
+  color=white
+/>
+<Text
+  text="3MKA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-0.2, -1.25, 1]}
+  color=white
+/>
+<Text
+  text="1STA"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[3.1, -1.25, 1]}
+  color=white
+/>
+
+<Text
+  text="1STB"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-3.5, -1.25, 3]}
+  color=white
+/>
+<Text
+  text="1STC"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-0.2, -1.25, 3]}
+  color=white
+/>
+<Text
+  text="1STD"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[3.1, -1.25, 3]}
+  color=white
+/>
+
+<Text
+  text="1STE"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-3.5, -1.25, 5]}
+  color=white
+/>
+<Text
+  text="1STF"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-0.2, -1.25, 5]}
+  color=white
+/>
+<Text
+  text="1STG"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[3.1, -1.25, 5]}
+  color=white
+/>
+
+<Text
+  text="FOT/SFT"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-3.5, -1.25, 7]}
+  color=white
+/>
+<Text
+  text="KOMBINASJONS-
+  PROGRAMMET"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[-0.2, -1.25, 7]}
+  color=white
+/>
+<Text
+  text="1STH"
+  interactive
+  fontSize={0.45}
+  anchorY="100%"
+  anchorX="50%"
+  rotation.x={-1.57}
+  position={[3.1, -1.25, 7]}
   color=white
 />
 
