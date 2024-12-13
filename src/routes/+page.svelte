@@ -3,41 +3,21 @@
   import { List, type ListOptions } from 'svelte-tweakpane-ui';
 </script>
 
-<!-- <a href="./about">about</a> -->
+<a href="./program">Program</a>
+<a href="https://bestill.albillett.no/1541">Billetter</a>
+<a href="./konseptvideo">Konseptvideo</a>
 
-
-<!-- <div class="combobox">
-  <div class="centered-container">
-    <pre>
-      <List 
-        bind:value={selection} 
-        label="Velg din klasse ->" 
-        {options} 
-        />
-      Din valgte klasse: {selection}
-    </pre>
-  </div>
-</div> -->
 
 <div class="app">
   <App />
-
 </div>
-
-<!-- <iframe 
-  style="border-radius:12px" 
-  src="https://open.spotify.com/embed/track/2R9XyIjviqEsb93rZkdDVu?utm_source=generator" 
-  width="100%" height="352" frameBorder="0" allowfullscreen="" 
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-  loading="lazy">
-</iframe> -->
 
 <style>
   :global(body) {
     margin: 0;
   }
 
-  /* a {
+  a {
     width: 100vw;
     height: 100vh;
     background: rgb(7, 19, 42);
@@ -45,7 +25,7 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-style: oblique;
-  } */
+  }
 
   .centered-container {
     background-color: #717cff; /* Hvit bakgrunn */
@@ -83,6 +63,3 @@
     background-color: #717cff; /* Bakgrunnsfarge */
   }
 </style>
-
-<!-- rgb(4, 8, 28) 100%);
-background: rgb(7, 19, 42); -->
