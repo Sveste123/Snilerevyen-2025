@@ -23,7 +23,7 @@
   // };
   // export let minPolarAngle: number 
   // export let maxPolarAngle: number
-  $: color = '#FE3D00'
+  // $: color = '#717cff'
 </script>
 
 <T.PerspectiveCamera

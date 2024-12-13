@@ -48,7 +48,7 @@
   } */
 
   .centered-container {
-    background-color: #ffffff; /* Hvit bakgrunn */
+    background-color: #717cff; /* Hvit bakgrunn */
     padding: 0px; /* Gi litt luft rundt innholdet */
     box-sizing: border-box; /* Inkluderer padding og border i bredden */
     text-align: center; /* Sentrer tekst */
@@ -68,7 +68,7 @@
   pre {
     margin: 1px 0; /* Gi litt margin mellom <pre>-elementene */
     white-space: pre-wrap; /* Sørg for at lange linjer brytes om nødvendig */
-    background-color: #ffffff; /* Hvit bakgrunn */
+    background-color: #717cff; /* Hvit bakgrunn */
     color: #000000; /* Svart tekst */
     font-family: Arial, sans-serif; /* Arial skrifttype for <pre> */
     height: 12vh;
@@ -80,7 +80,7 @@
     justify-content: center; /* Sentrer horisontalt */
     align-items: center; /* Sentrer vertikalt */
     height: 100vh; /* Fyll hele høyden av visningsporten */
-    background: rgb(132, 126, 158); /* Bakgrunnsfarge */
+    background-color: #717cff; /* Bakgrunnsfarge */
   }
 </style>
 
