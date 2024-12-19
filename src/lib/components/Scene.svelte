@@ -14,7 +14,7 @@
   // export let rotz: number
   // export let camx: [number, number, number] // camx is an array
   // export let target: [number, number, number] // target is also an array
-  export let selection: [0, 0, 0]
+  // export let selection: [0, 0, 0]
 
   // let isPianoClicked = writable(false);
 
@@ -38,12 +38,15 @@
     enableDamping={false}
     enablePan={false}
     autoRotateSpeed={0.5}
-    target={[selection[0], selection[1], selection[2]-0.0000001]}
     rotateSpeed={rotateSpeed}
     zoomSpeed={zoomSpeed}
+    target={[0, 0, 0]}
   />
     <!-- maxPolarAngle={1.6}
     minPolarAngle={1.25} -->
+
+    <!-- target={[selection[0], selection[1], selection[2]-0.0000001]} -->
+
 
 </T.PerspectiveCamera>
 
@@ -64,7 +67,7 @@
 
 <T.Mesh
   interactive
-  position={[0, -0.06, 0]}
+  position={[0, 0, 0]}
   scale={0.016}
 >
   <Extra.GLTF 

@@ -38,12 +38,6 @@
   <Scene 
   {rotateSpeed}
   {zoomSpeed}
-  {rotx}
-  {roty}
-  {rotz}
-  {camx}
-  {target}
-  {selection}
   />
 </Canvas>
 
