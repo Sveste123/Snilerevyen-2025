@@ -8,9 +8,9 @@
         top: 50%; /* Plasserer senter i høyden */
         left: 50%; /* Plasserer senter i bredden */
         transform: translate(-50%, -50%); /* Flytter elementet tilbake for perfekt sentrering */
-        width: 90%; /* Responsiv bredde */
-        max-width: 600px; /* Maks bredde for større skjermer */
-        height: auto; /* Holder høyden proporsjonal */
+        width: 80%; /* Responsiv bredde */
+        max-width: 700px; /* Maks bredde for større skjermer */
+        height: 50%; /* Holder høyden proporsjonal */
         border: 4px solid white;
         border-radius: 40px;
         overflow: hidden;
@@ -20,7 +20,7 @@
 
     iframe {
         width: 100%;
-        height: 40vh; /* Responsiv høyde */
+        height: 50vh; /* Responsiv høyde */
         border: none;
     }
 </style>
