@@ -28,6 +28,7 @@
     "@threlte/extras": "^8.11.2",
     "@threlte/rapier": "^2.0.0",
     "@threlte/theatre": "^2.1.7",
+    "sharp": "^0.33.5",
     "svelte-tweakpane-ui": "^1.2.2",
     "three": "^0.159.0",
     "tweakpane": "^4.0.3",

@@ -1,12 +1,160 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<title>Snilerevyen 2025 - Spark opp og ta sats nedenfra</title>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+	<style>
+		:global(body) {
+			position: fixed;
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background: #717cff;
+			height: 100%;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			padding: 0 20px;
+			line-height: 1.6;
+		}
+		.app {
+			display: flex;
+			position: fixed;
+			left: 0%;
+			top: 8%;
+			justify-content: center; /* Sentrer horisontalt */
+			align-items: center; /* Sentrer vertikalt */
+			width: 100%;
+			height: 90%; /* Fyll hele høyden av visningsporten */
+			background-color: #717cff; /* Bakgrunnsfarge */
+		}
+		/* Watermark */
+		.watermark-container {
+			position: fixed;
+			width: 80%;
+			height: 80%;
+			background-color: #717cff;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+		}
+		.watermark {
+			position: fixed;
+			top: 96%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(0deg);
+			font-size: 14.5px;
+			color: rgba(0, 0, 0, 0.3); /* Semi-transparent farge */
+			white-space: nowrap;
+			pointer-events: none; /* Gjør det ikke-klikkbart */
+			z-index: 10;
+		}
+		/* Top Menu */
+		.top-menu {
+			position: fixed;
+			width: 100%;
+			top: 0%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #717cff;
+			padding: 15px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			z-index: 1100;
+		}
+		.top-menu a {
+			margin: 15px;
+			text-decoration: none;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.top-menu a:hover {
+			color: #ffd700; /*Gullfarge ved hover */
+		}
+	
+		/* Responsive Container */
+		.page-container {
+			max-width: 700px;
+			margin: 1px auto;
+			padding: 5px;
+			background: #717cff;
+			border-radius: 8px;
+			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+		}
+	
+	
+		/* Program */
+		/* .container {
+			max-width: 100%;
+			height: 100%;
+			margin: 50px auto;
+			background-color: #717cff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			text-align: left;
+		} */
+		h1 {
+			text-align: center;
+			color: white;
+			font-size: 2em;
+			margin-bottom: 0px;
+		}
+	
+		/* Fremhevede avsnitt */
+		p {
+			font-size: 1.4em;
+			color: #FFD700;
+			margin-bottom: 0px;
+		}
+	
+		strong {
+			color: white;
+		}
+	
+		/* Liste-stil */
+		ul {
+			list-style-type: none; /* Fjern standard bullets */
+			padding: 0;
+		}
+	
+		ul li {
+			background: white;
+			color: #000000;
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			font-size: 1.2em;
+			pointer-events: none; /* Gjør det ikke-klikkbart */
+		}
+	
+		ul li:hover {
+			background: #5a68d8;
+			cursor: pointer;
+		}
+		/* Media Query for Narrow Screens */
+		@media (max-width: 1200px) {
+			.top-menu {
+			/* flex-direction: column; */
+			position: fixed;
+			width: 90%;
+			left: 1.8%;
+			top: 1.5%;
+			}
+			.top-menu a {
+			margin: 5px;
+			}
+			.page-container {
+			padding: 10px;
+			}
+		}
+	
+	</style>
+	<body class="app", data-sveltekit-preload-data="hover">
+		<div class="app">%sveltekit.body%</div>
 	</body>
 </html>
