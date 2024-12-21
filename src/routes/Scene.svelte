@@ -5,7 +5,8 @@
 	import { BoxGeometry, Group, MeshBasicMaterial } from 'three';
   import { writable } from 'svelte/store';
   // import * as Utils from 'three/src/math/MathUtils'
-  import { interactivity, Text, useCursor } from '@threlte/extras'
+  import { Environment, interactivity, Text, useCursor } from '@threlte/extras'
+	import Spark from './Spark.svelte';
   // import { DEG2RAD } from 'three/src/math/MathUtils'
   export let rotateSpeed: number
   export let zoomSpeed: number
@@ -24,6 +25,7 @@
   // export let minPolarAngle: number 
   // export let maxPolarAngle: number
   // $: color = '#717cff'
+  interactivity();
 </script>
 
 <T.PerspectiveCamera
@@ -50,10 +52,10 @@
 
 </T.PerspectiveCamera>
 
-<T.AmbientLight intensity={1} 
-  position={[0, 1, 1]}
+<Environment 
+  files='/EnvironmentalLights.hdr'
 />
-<T.DirectionalLight intensity={2} 
+<T.DirectionalLight intensity={1.6} 
   position={[1, 1, 1]}
 />
 
@@ -65,7 +67,7 @@
 />
 
 
-<T.Mesh
+<!-- <T.Mesh
   interactive
   position={[0, 0, 0]}
   scale={0.016}
@@ -73,7 +75,11 @@
   <Extra.GLTF 
     url="./models/Spark.glb" 
   />
-</T.Mesh>
+</T.Mesh> -->
+
+<Spark 
+  interactive
+/>
 
 <!-- <Text
   text="1MKA"

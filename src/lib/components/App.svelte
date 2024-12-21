@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Canvas } from '@threlte/core'
   import { Text } from '@threlte/extras'
-  import Scene from './Scene.svelte'
+  import Scene from '../../routes/Scene.svelte'
   import Scene2 from './Scene2.svelte'
   import Settings from './Settings.svelte'
 	import Page from '../../routes/+page.svelte';
