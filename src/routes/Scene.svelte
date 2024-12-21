@@ -31,7 +31,7 @@
 <T.PerspectiveCamera
   makeDefault
   position={[0, 0, 0.3]}
-  fov={69}
+  fov={50}
   enableZoom={0}
   >
 
@@ -42,7 +42,7 @@
     autoRotateSpeed={0.5}
     rotateSpeed={rotateSpeed}
     zoomSpeed={zoomSpeed}
-    target={[0, 0, 0]}
+    target={[-0.02, -0.02, -0.1]}
   />
     <!-- maxPolarAngle={1.6}
     minPolarAngle={1.25} -->
@@ -55,7 +55,7 @@
 <Environment 
   files='/EnvironmentalLights.hdr'
 />
-<T.DirectionalLight intensity={1.6} 
+<T.DirectionalLight intensity={2.6} 
   position={[1, 1, 1]}
 />
 

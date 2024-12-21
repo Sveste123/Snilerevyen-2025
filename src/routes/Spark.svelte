@@ -1,5 +1,5 @@
 <script lang="ts">
-  import state from './state.json'
+  import state from './realState.json'
   import type * as THREE from 'three'
   import { Group } from 'three'
   import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core'
@@ -30,8 +30,17 @@
 
 <Theatre config={{ state: state }}>
   <Sequence autoplay>
-    <SheetObject key="Spark" props={{ scale: 0, opacity: 0, rotationy: 0, rotationx: 0, positionx: 0, positiony: 0 }} let:values>
-      <T is={ref} dispose={false} {...$$restProps}  rotation.y={values.rotationy} rotation.x={values.rotationx} position.x={values.positionx} position.y={values.positiony} scale={values.scale} bind:this={$component}>
+    <SheetObject key="Spark" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
+      <T is={ref} dispose={false} {...$$restProps}  
+        rotation.x={values.rotationx} 
+        rotation.y={values.rotationy} 
+        rotation.z={values.rotationz} 
+        position.x={values.positionx} 
+        position.y={values.positiony} 
+        position.z={values.positionz} 
+        scale={values.scale} 
+        bind:this={$component}
+      >
         {#await gltf}
           <slot name="fallback" />
         {:then gltf}
