@@ -8,7 +8,6 @@
   import { Environment, interactivity, Text, useCursor } from '@threlte/extras'
 	import Spark from './Spark.svelte';
   // import { DEG2RAD } from 'three/src/math/MathUtils'
-  export let rotateSpeed: number
   export let zoomSpeed: number
   // export let rotx: number
   // export let roty: number
@@ -26,23 +25,28 @@
   // export let maxPolarAngle: number
   // $: color = '#717cff'
   interactivity();
+  
+  /* SNOW-SCRIPT START*/
+  import Snow from './Snow.svelte';
+
+  /* SNOW-SCRIPT END */
 </script>
 
 <T.PerspectiveCamera
   makeDefault
-  position={[0, 0, 0.3]}
-  fov={50}
+  position={[0, 0, 0.4]}
+  fov={55}
   enableZoom={0}
   >
 
   <OrbitControls
     enableZoom={false}
-    enableDamping={false}
+    enableDamping={true}
     enablePan={false}
-    autoRotateSpeed={0.5}
-    rotateSpeed={rotateSpeed}
+    autoRotate={true}
+    autoRotateSpeed={0.1}
     zoomSpeed={zoomSpeed}
-    target={[-0.02, -0.02, -0.1]}
+    target={[0, 0, 0]}
   />
     <!-- maxPolarAngle={1.6}
     minPolarAngle={1.25} -->
@@ -66,7 +70,6 @@
   opacity={1}
 />
 
-
 <!-- <T.Mesh
   interactive
   position={[0, 0, 0]}
@@ -80,6 +83,9 @@
 <Spark 
   interactive
 />
+
+<!-- Bruker Sveltes await-block for å laste teksturen -->
+<Snow/>
 
 <!-- <Text
   text="1MKA"

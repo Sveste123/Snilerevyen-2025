@@ -36,7 +36,6 @@
   />
 
   <Scene 
-  {rotateSpeed}
   {zoomSpeed}
   />
 </Canvas>

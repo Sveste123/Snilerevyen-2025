@@ -37,7 +37,7 @@
                       0.5
                     ],
                     "type": "bezier",
-                    "value": -2.75
+                    "value": -2.42
                   },
                   {
                     "id": "TVNxVtxbnb",
@@ -50,7 +50,7 @@
                       0.5
                     ],
                     "type": "bezier",
-                    "value": -2.75
+                    "value": -2.4
                   },
                   {
                     "id": "5EMRY0xJA1",
@@ -140,20 +140,20 @@
                       0.5
                     ],
                     "type": "bezier",
-                    "value": 0.1616312316536412
+                    "value": 0.3
                   },
                   {
-                    "id": "LzjbOVbVOr",
+                    "id": "lWaASNe24p",
                     "position": 0.9,
                     "connectedRight": true,
                     "handles": [
                       0.5,
                       0.5,
                       0.5,
-                      0.5
+                      0
                     ],
                     "type": "bezier",
-                    "value": 0.04309129097954757
+                    "value": 0.08089606532146422
                   },
                   {
                     "id": "c67tqjnGi_",
@@ -188,17 +188,17 @@
                     "value": -0.06000000000000004
                   },
                   {
-                    "id": "3-gWujvAxu",
+                    "id": "X0uIHR8HLN",
                     "position": 0.9,
                     "connectedRight": true,
                     "handles": [
                       0.5,
                       0.5,
                       0.5,
-                      0.5
+                      0
                     ],
                     "type": "bezier",
-                    "value": -0.06000000000000001
+                    "value": -0.06000000000000002
                   },
                   {
                     "id": "5fjN09d8jt",
@@ -215,13 +215,13 @@
                   },
                   {
                     "id": "Iam7fsuc9v",
-                    "position": 1.267,
+                    "position": 1.167,
                     "connectedRight": true,
                     "handles": [
                       0.5,
                       0.5,
-                      0.5,
-                      0.5
+                      0.646,
+                      0.044
                     ],
                     "type": "bezier",
                     "value": 0.03
@@ -231,8 +231,8 @@
                     "position": 1.533,
                     "connectedRight": true,
                     "handles": [
-                      0.5,
-                      0.5,
+                      0.727,
+                      0.511,
                       0.5,
                       0
                     ],
@@ -275,20 +275,20 @@
                       0.5
                     ],
                     "type": "bezier",
-                    "value": 0.22129857354115143
+                    "value": 0.23129857354115144
                   },
                   {
-                    "id": "Ql6i4fgMZe",
+                    "id": "iQ1YuEZcZR",
                     "position": 0.9,
                     "connectedRight": true,
                     "handles": [
                       0.5,
                       0.5,
                       0.5,
-                      0.5
+                      0
                     ],
                     "type": "bezier",
-                    "value": -0.0157638270084568
+                    "value": 0.06325675124095823
                   },
                   {
                     "id": "-14F93Y5gD",
@@ -301,7 +301,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -0.1
+                    "value": 0
                   }
                 ]
               },
@@ -380,6 +380,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "5fOqffXk2rk13W5y",
     "6zRT-tSfBlYm0ONo",
     "KkfZVigRuBft075r"
   ]
