@@ -36,14 +36,14 @@
   makeDefault
   position={[0, 0, 0.4]}
   fov={55}
-  enableZoom={0}
+  enableZoom={true}
   >
 
   <OrbitControls
     enableZoom={false}
     enableDamping={true}
     enablePan={false}
-    autoRotate={true}
+    autoRotate={false}
     autoRotateSpeed={0.1}
     zoomSpeed={zoomSpeed}
     target={[0, 0, 0]}
@@ -86,6 +86,12 @@
 
 <!-- Bruker Sveltes await-block for å laste teksturen -->
 <Snow/>
+
+<T.Mesh position={[0, -0.06, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[20, 20, 1]}>
+  <!-- White material for snowy ground -->
+  <T.MeshBasicMaterial color="#FFFAFA" />
+  <T.PlaneGeometry args={[0.02, 0.02]} />
+</T.Mesh>
 
 <!-- <Text
   text="1MKA"

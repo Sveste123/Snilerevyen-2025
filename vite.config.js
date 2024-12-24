@@ -6,5 +6,13 @@ export default defineConfig({
 	ssr: {
 		noExternal: ['postprocessing', 'three']
 		
+	},
+	server: {
+		fs: {
+			allow: [
+				'./static', // Allow access to the static folder
+				'./src'     // Default access to the src folder
+			]
+		}
 	}
 });
