@@ -1,5 +1,5 @@
 <script lang="ts">
-  import snowstate from '/src/routes/snowState.json' 
+  import state from '/src/routes/universalState.json' 
   import { T } from '@threlte/core';
   import type * as THREE from 'three'
   import { useLoader } from '@threlte/core';
@@ -27,7 +27,7 @@
     return Array.from({ length: snowCount }, () => ({
       position: [
         Math.random() * 0.6 - 0.3, // X: tilfeldig mellom -10 og 10
-        Math.random() * 0.6 - 0.3, // Y: tilfeldig mellom -10 og 10
+        Math.random() * 1.8 - 0.1, // Y: tilfeldig mellom -10 og 10
         Math.random() * 0.6 - 0.3  // Z: tilfeldig mellom -10 og 10
       ],
       scale: Math.random() * 0.003 // Tilfeldig mellom 0.005 og 0.04
@@ -40,7 +40,7 @@
   });
 </script>
 
-<Theatre config={{ state: snowstate }}>
+<Theatre config={{ state: state }}>
   <Sequence autoplay>
     <SheetObject key="Snow" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  

@@ -7,6 +7,8 @@
   // import * as Utils from 'three/src/math/MathUtils'
   import { Environment, interactivity, Text, useCursor } from '@threlte/extras'
 	import Spark from './Spark.svelte';
+  import Snow4kplane from './snow4kplane.svelte';
+  import Snow4ksphere from './snow4ksphere.svelte';
   // import { DEG2RAD } from 'three/src/math/MathUtils'
   export let zoomSpeed: number
   // export let rotx: number
@@ -59,8 +61,9 @@
 <Environment 
   files='/EnvironmentalLights.hdr'
 />
-<T.DirectionalLight intensity={2.6} 
-  position={[1, 1, 1]}
+<T.DirectionalLight 
+  intensity={7} 
+  position={[0.5, 0.5, 0.5]}
 />
 
 <ContactShadows
@@ -72,11 +75,11 @@
 
 <!-- <T.Mesh
   interactive
-  position={[0, 0, 0]}
+  position={[0, -0.06, 0]}
   scale={0.016}
 >
   <Extra.GLTF 
-    url="./models/Spark.glb" 
+    url="./models/snow4kplane.glb" 
   />
 </T.Mesh> -->
 
@@ -87,11 +90,21 @@
 <!-- Bruker Sveltes await-block for å laste teksturen -->
 <Snow/>
 
-<T.Mesh position={[0, -0.06, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[20, 20, 1]}>
-  <!-- White material for snowy ground -->
+<!-- <T.Mesh position={[0, -0.06, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[20, 20, 1]}>
   <T.MeshBasicMaterial color="#FFFAFA" />
   <T.PlaneGeometry args={[0.02, 0.02]} />
-</T.Mesh>
+</T.Mesh> -->
+
+<!-- <Snow4kplane
+  position={[0, -0.06, 0]}
+  scale={0.3}
+/> -->
+
+<Snow4ksphere
+  position={[0, -0.16, 0]}
+  scale={[0.3, 0.3, 0.1]}
+  rotation={[1.5*Math.PI, 0, 0]}
+/>
 
 <!-- <Text
   text="1MKA"
