@@ -2,15 +2,15 @@
     // import { Checkbox, Pane, ThemeUtils, Slider } from 'tweakpane';
     import {Checkbox, Slider, Pane, ThemeUtils} from 'svelte-tweakpane-ui';
 
-    export let rotateSpeed: number
-    export let zoomSpeed: number
-    export let scale: number
-    export let rotx: number
-    export let roty: number
-    export let rotz: number
-    export let minPolarAngle: number
-    export let maxPolarAngle: number
-    export let camx: [number, number, number] // Definerer camx som en array med tre tall
+    // export let rotateSpeed: number
+    // export let zoomSpeed: number
+    // export let scale: number
+    // export let rotx: number
+    // export let roty: number
+    // export let rotz: number
+    // export let minPolarAngle: number
+    // export let maxPolarAngle: number
+    // export let camx: [number, number, number] // Definerer camx som en array med tre tall
     // export let selection: [number, number, number]
     import { List, type ListOptions } from 'svelte-tweakpane-ui';
 

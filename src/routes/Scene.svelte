@@ -7,7 +7,6 @@
   // import * as Utils from 'three/src/math/MathUtils'
   import { Environment, interactivity, Text, useCursor } from '@threlte/extras'
 	import Spark from './Spark.svelte';
-  import Snow4kplane from './snow4kplane.svelte';
   import Snow4ksphere from './snow4ksphere.svelte';
   // import { DEG2RAD } from 'three/src/math/MathUtils'
   export let zoomSpeed: number
@@ -30,6 +29,7 @@
   
   /* SNOW-SCRIPT START*/
   import Snow from './Snow.svelte';
+	import Snohaug from './Snohaug.svelte';
 
   /* SNOW-SCRIPT END */
 </script>
@@ -75,13 +75,23 @@
 
 <!-- <T.Mesh
   interactive
-  position={[0, -0.06, 0]}
-  scale={0.016}
+  position={[0, 0, 0]}
+  scale={0.01}
 >
   <Extra.GLTF 
-    url="./models/snow4kplane.glb" 
+    url="./models/Snohaug.glb" 
   />
 </T.Mesh> -->
+
+<!-- <T.Mesh position={[0, -0.15, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.01, 0.01, 0.004]}>
+  <T.MeshBasicMaterial color="white" />
+  <T.SphereGeometry args={[20, 20]} />
+</T.Mesh> -->
+
+<Snohaug
+  interactive
+  position={[0, -0.16, 0]}
+/>
 
 <Spark 
   interactive
@@ -99,12 +109,6 @@
   position={[0, -0.06, 0]}
   scale={0.3}
 /> -->
-
-<Snow4ksphere
-  position={[0, -0.16, 0]}
-  scale={[0.3, 0.3, 0.1]}
-  rotation={[1.5*Math.PI, 0, 0]}
-/>
 
 <!-- <Text
   text="1MKA"

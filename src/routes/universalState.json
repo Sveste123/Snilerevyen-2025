@@ -454,6 +454,65 @@
               "[\"positiony\"]": "EJ9pUjtZUs",
               "[\"scale\"]": "kxqj6bDxzw"
             }
+          },
+          "Snøhaug": {
+            "trackData": {
+              "UCZGyW3ZUy": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Snøhaug:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "J3x70TC6dM",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.01
+                  },
+                  {
+                    "id": "bGT17hYaSs",
+                    "position": 2,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 10
+                  }
+                ]
+              },
+              "DSoJNsi079": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Snøhaug:[\"opacity\"]",
+                "keyframes": [
+                  {
+                    "id": "Orzk2CjQos",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "UCZGyW3ZUy",
+              "[\"opacity\"]": "DSoJNsi079"
+            }
           }
         }
       }
@@ -461,6 +520,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "zer-LL6IC-gcIg4A",
     "3INYdbKnXQIdi3WQ",
     "3NxZMF1Ht-ERfSNa",
     "MwyNAgkgqa__8-Rn",
