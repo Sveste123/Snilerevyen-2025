@@ -20,7 +20,7 @@ Command: npx @threlte/gltf@2.0.3 ./models/Snohaug.glb -t
       Sphere: THREE.Mesh
     }
     materials: {
-      snow_02: THREE.MeshStandardMaterial
+      snow_01: THREE.MeshStandardMaterial
     }
   }
 
@@ -33,7 +33,7 @@ Command: npx @threlte/gltf@2.0.3 ./models/Snohaug.glb -t
   {#await gltf}
     <slot name="fallback" />
   {:then gltf}
-    <T.Mesh geometry={gltf.nodes.Sphere.geometry} material={gltf.materials.snow_02} rotation={[Math.PI / 2, 0, 0]} scale={0.4} position={[0, -0.098, 0]}/>
+    <T.Mesh geometry={gltf.nodes.Sphere.geometry} material={gltf.materials.snow_01} rotation={[Math.PI / 2, 0, 0]} scale={0.25}/>
   {:catch error}
     <slot name="error" {error} />
   {/await}
