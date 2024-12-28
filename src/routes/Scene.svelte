@@ -61,11 +61,17 @@
 
 </T.PerspectiveCamera>
 
-<Environment 
+<!-- <Environment 
   files='/EnvironmentalLights.hdr'
-/>
+/> -->
+
 <T.DirectionalLight 
   intensity={7} 
+  position={[0.5, 0.5, 0.5]}
+/>
+
+<T.AmbientLight 
+  intensity={1.66} 
   position={[0.5, 0.5, 0.5]}
 />
 
