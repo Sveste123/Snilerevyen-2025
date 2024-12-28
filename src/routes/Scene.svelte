@@ -28,8 +28,10 @@
   interactivity();
   
   /* SNOW-SCRIPT START*/
+  import Snosprut from './Snosprut.svelte';
   import Snow from './Snow.svelte';
 	import Snohaug from './Snohaug.svelte';
+	import Snohaug2 from './Snohaug2.svelte';
 
   /* SNOW-SCRIPT END */
 </script>
@@ -49,9 +51,10 @@
     autoRotateSpeed={0.1}
     zoomSpeed={zoomSpeed}
     target={[0, 0, 0]}
+    maxPolarAngle={1.6}
+    minPolarAngle={0}
   />
-    <!-- maxPolarAngle={1.6}
-    minPolarAngle={1.25} -->
+
 
     <!-- target={[selection[0], selection[1], selection[2]-0.0000001]} -->
 
@@ -90,8 +93,18 @@
 
 <Snohaug
   interactive
-  position={[0, -0.16, 0]}
 />
+
+<Snohaug2
+  interactive
+/>
+
+<!-- 
+<Snohaug
+  interactive
+  position={[0, -0.06, 0]}
+  scale={[0.2, 0.4, 0.2]}
+/> -->
 
 <Spark 
   interactive
@@ -99,6 +112,9 @@
 
 <!-- Bruker Sveltes await-block for å laste teksturen -->
 <Snow/>
+
+<Snosprut/>
+
 
 <!-- <T.Mesh position={[0, -0.06, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[20, 20, 1]}>
   <T.MeshBasicMaterial color="#FFFAFA" />

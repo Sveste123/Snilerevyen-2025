@@ -7,7 +7,6 @@
     <a href="./">Startside</a>
     <a href="./program">Program</a>
     <a href="./konseptvideo">Konseptvideo</a>
-    <a href="./snow">Snø</a>
     <a href="https://bestill.albillett.no/1541" target="_blank">Billetter</a>
 </div>
 <div class="page-container">

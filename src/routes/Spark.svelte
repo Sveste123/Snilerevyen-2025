@@ -1,5 +1,5 @@
 <script lang="ts">
-  import state from '/src/routes/universalState.json' 
+  import state from '/src/routes/universalState.json'
   import type * as THREE from 'three'
   import { Group } from 'three'
   import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core'
@@ -28,7 +28,7 @@
   const component = forwardEventHandlers()
 </script>
 
-<Theatre config={{ state: state }}>
+<Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
     <SheetObject key="Spark" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  
