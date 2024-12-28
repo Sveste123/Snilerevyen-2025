@@ -6,3 +6,7 @@
 <div class="app">
   <App />
 </div>
+
+<div class="overlay">
+  <img src="/SOOTSN.png" alt="Overlay" />
+</div>

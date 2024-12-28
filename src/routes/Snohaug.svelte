@@ -28,7 +28,7 @@
 
 <Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
-    <SheetObject key="Snohaug1" props={{ scale: 1, opacity: 1, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: -0.1, positionz: 0, }} let:values>
+    <SheetObject key="Snohaug1" props={{ scale: 1, opacity: 1, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  
         rotation.x={values.rotationx} 
         rotation.y={values.rotationy} 

@@ -147,7 +147,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -3.93
+                    "value": -4.3
                   }
                 ]
               },
@@ -263,7 +263,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -0.02
+                    "value": -0.029
                   }
                 ]
               },
@@ -738,6 +738,8 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "A6J19rnZQ36zkB3M",
+    "fo9cpR0gs6CYtEJu",
     "mFp5OdSTFpXcKQu8",
     "mZKdZmxE370-vM-M",
     "I0bkZQwHAEuZMVJx",

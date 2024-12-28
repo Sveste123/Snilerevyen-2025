@@ -34,13 +34,30 @@
 	import Snohaug2 from './Snohaug2.svelte';
 
   /* SNOW-SCRIPT END */
+
+  // Reactive store for media query
+  const isSmallScreen = writable(false);
+
+  // Update store based on screen size
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  const updateScreenSize = () => {
+    isSmallScreen.set(mediaQuery.matches);
+  };
+
+  // Add listener
+  mediaQuery.addEventListener('change', updateScreenSize);
+  updateScreenSize(); // Initialize
+
+  // Reactive camera properties
+  $: cameraProps = $isSmallScreen
+    ? { fov: 55, position: [0, 0.1, 0.4] } // Small screen
+    : { fov: 55, position: [0, 0.1, 0.3] }; // Large screen
 </script>
 
 <T.PerspectiveCamera
   makeDefault
-  position={[0, 0, 0.4]}
-  fov={55}
-  enableZoom={true}
+  fov={cameraProps.fov}
+  position={cameraProps.position} 
   >
 
   <OrbitControls
@@ -50,14 +67,20 @@
     autoRotate={false}
     autoRotateSpeed={0.1}
     zoomSpeed={zoomSpeed}
-    target={[0, 0, 0]}
+    target={[0, -0.02, 0]}
     maxPolarAngle={1.6}
     minPolarAngle={0}
   />
-
-
-    <!-- target={[selection[0], selection[1], selection[2]-0.0000001]} -->
-
+  
+  <!-- {/* Mask as a child of the camera */} -->
+  <!-- <T.Group position={[0, 0, -0.1]}>
+    <Mask>
+      <T.Mesh>
+        <T.RingGeometry args={[0.05, 0.5, 60]} />
+        <T.MeshBasicMaterial color="#707dff"/>
+      </T.Mesh>
+    </Mask>
+  </T.Group> -->
 
 </T.PerspectiveCamera>
 
