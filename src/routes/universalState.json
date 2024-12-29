@@ -729,8 +729,30 @@
             }
           },
           "Snohaug1": {
-            "trackData": {},
-            "trackIdByPropPath": {}
+            "trackData": {
+              "vSbBQMJQxy": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Snohaug1:[\"positiony\"]",
+                "keyframes": [
+                  {
+                    "id": "JtFuTvtE5s",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"positiony\"]": "vSbBQMJQxy"
+            }
           }
         }
       }
@@ -738,6 +760,9 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "pxAibRn8csDuO8tn",
+    "W6YLAoFkyDFSd5k4",
+    "QGcIAMpIFXyiDo7L",
     "A6J19rnZQ36zkB3M",
     "fo9cpR0gs6CYtEJu",
     "mFp5OdSTFpXcKQu8",
