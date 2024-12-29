@@ -38,10 +38,6 @@
           "Snohaug1": {
             "opacity": 1,
             "positiony": -0.1
-          },
-          "DLB": {
-            "positionz": 0,
-            "positiony": 0
           }
         }
       },
@@ -752,89 +748,10 @@
                     "value": -0.101
                   }
                 ]
-              },
-              "Xq6Nvy_9pB": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "Snohaug1:[\"opacity\"]",
-                "keyframes": [
-                  {
-                    "id": "8bk9TYYieW",
-                    "position": 20,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0.5
-                    ],
-                    "type": "bezier",
-                    "value": 1
-                  },
-                  {
-                    "id": "nX1cNxvo71",
-                    "position": 22,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      0.5,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": 0
-                  }
-                ]
               }
             },
             "trackIdByPropPath": {
-              "[\"positiony\"]": "vSbBQMJQxy",
-              "[\"opacity\"]": "Xq6Nvy_9pB"
-            }
-          },
-          "DLB": {
-            "trackData": {
-              "ld_unOAPfA": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "DLB:[\"scale\"]",
-                "keyframes": [
-                  {
-                    "id": "s36xeYGaJv",
-                    "position": 0,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": 1
-                  }
-                ]
-              },
-              "wGYx3GuYH9": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "DLB:[\"positionz\"]",
-                "keyframes": [
-                  {
-                    "id": "NU77EgmVta",
-                    "position": 0,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": -1.1
-                  }
-                ]
-              }
-            },
-            "trackIdByPropPath": {
-              "[\"scale\"]": "ld_unOAPfA",
-              "[\"positionz\"]": "wGYx3GuYH9"
+              "[\"positiony\"]": "vSbBQMJQxy"
             }
           }
         }
@@ -843,8 +760,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
-    "6K9h-1jl_ZMWjoNt",
-    "BwreIR_SiZOYYEtD",
+    "f90XExrBczSOaGBB",
     "pxAibRn8csDuO8tn",
     "W6YLAoFkyDFSd5k4",
     "QGcIAMpIFXyiDo7L",
