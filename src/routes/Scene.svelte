@@ -7,7 +7,6 @@
   // import * as Utils from 'three/src/math/MathUtils'
   import { Environment, interactivity, Text, useCursor } from '@threlte/extras'
 	import Spark from './Spark.svelte';
-  import Snow4ksphere from './snow4ksphere.svelte';
   // import { DEG2RAD } from 'three/src/math/MathUtils'
   export let zoomSpeed: number
   // export let rotx: number
@@ -32,6 +31,7 @@
   import Snow from './Snow.svelte';
 	import Snohaug from './Snohaug.svelte';
 	import Snohaug2 from './Snohaug2.svelte';
+  import BackgroundCircles from './BackgroundCircles.svelte'
 
   /* SNOW-SCRIPT END */
 
@@ -68,7 +68,7 @@
     autoRotateSpeed={0.1}
     zoomSpeed={zoomSpeed}
     target={[0, -0.02, 0]}
-    maxPolarAngle={1.6}
+    maxPolarAngle={1.5}
     minPolarAngle={0}
   />
   
@@ -81,6 +81,8 @@
       </T.Mesh>
     </Mask>
   </T.Group> -->
+  
+  <BackgroundCircles/>
 
 </T.PerspectiveCamera>
 
