@@ -40,7 +40,7 @@
             "positiony": -0.1
           },
           "DLB": {
-            "positiony": 0
+            "opacity": 1
           }
         }
       },
@@ -433,7 +433,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -1.8
+                    "value": -1.85
                   }
                 ]
               },
@@ -778,30 +778,8 @@
             }
           },
           "DLB": {
-            "trackData": {
-              "5Sumz1xFIz": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "DLB:[\"scale\"]",
-                "keyframes": [
-                  {
-                    "id": "TVDdt8nfbV",
-                    "position": 0,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": 1
-                  }
-                ]
-              }
-            },
-            "trackIdByPropPath": {
-              "[\"scale\"]": "5Sumz1xFIz"
-            }
+            "trackData": {},
+            "trackIdByPropPath": {}
           }
         }
       }
@@ -809,6 +787,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "JzeF5uPkx2fDv2qF",
     "wNRVsIeUODXQvFmU",
     "XSb3dxmHOIxc3AlX",
     "REv3229JiAxwhxOj",

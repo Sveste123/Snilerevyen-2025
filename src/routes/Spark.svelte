@@ -5,6 +5,7 @@
   import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core'
   import { useGltf } from '@threlte/extras'
   import { Theatre, SheetObject, Sequence } from '@threlte/theatre'
+  import { onMount } from 'svelte';
 
   type $$Props = Props<THREE.Group>
   type $$Events = Events<THREE.Group>

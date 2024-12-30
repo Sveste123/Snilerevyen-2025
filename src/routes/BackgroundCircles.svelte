@@ -66,23 +66,23 @@
         {#each ringParticles as particle (particle.position, particle.scale)}
           <T.Group>
             <T.Mesh position={[particle.position[0], particle.position[1] + 0.02, particle.position[2] - 0.01]} scale={particle.scale}> <!-- "SHADOW" -->
-            <T.RingGeometry args={[0, 0.2, 44]} /> <!-- Inner radius 0.1, outer radius 0.2, 32 segments -->
-            <T.MeshBasicMaterial 
-              color={0x2a3272} 
-              side={T.DoubleSide}  
-              opacity={values.opacity}
-              transparent
-              />
-          </T.Mesh>
-          <T.Mesh position={particle.position} scale={particle.scale}> <!-- LIGHT-BLUE -->
-            <T.RingGeometry args={[0, 0.2, 44]} /> <!-- Inner radius 0.1, outer radius 0.2, 32 segments -->
-              <T.MeshBasicMaterial 
-                color={0x8296ff} 
-                side={T.DoubleSide} 
-                opacity={values.opacity}
-                transparent
-                />
-          </T.Mesh>
+              <T.RingGeometry args={[0, 0.2, 44]} /> <!-- Inner radius 0.1, outer radius 0.2, 32 segments -->
+                <T.MeshBasicMaterial 
+                  color={0x2a3272} 
+                  side={T.DoubleSide}  
+                  opacity={values.opacity}
+                  transparent
+                  />
+            </T.Mesh>
+            <T.Mesh position={particle.position} scale={particle.scale}> <!-- LIGHT-BLUE -->
+              <T.RingGeometry args={[0, 0.2, 44]} /> <!-- Inner radius 0.1, outer radius 0.2, 32 segments -->
+                <T.MeshBasicMaterial 
+                  color={0x8296ff} 
+                  side={T.DoubleSide} 
+                  opacity={values.opacity}
+                  transparent
+                  />
+            </T.Mesh>
           </T.Group>
           
         {/each}
