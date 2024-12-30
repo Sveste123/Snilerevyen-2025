@@ -51,6 +51,7 @@
               material.opacity={values.opacity}
               material.transparent
               material.side={0}
+              castShadow
             />
             <T.Mesh 
               geometry={gltf.nodes.Spark_2.geometry} 
@@ -58,6 +59,7 @@
               material.opacity={values.opacity}
               material.transparent
               material.side={0}
+              castShadow
             />
           </T.Group>
         {:catch error}

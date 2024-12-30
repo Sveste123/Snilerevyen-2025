@@ -51,6 +51,7 @@
           material.transparent
           rotation={[Math.PI / 2, 0, 2]} 
           scale={[0.27, 0.27, 0.1]} 
+          receiveShadow
           />
         </T.Group>
       {:catch error}

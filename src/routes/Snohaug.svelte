@@ -14,7 +14,7 @@
 
   type GLTFResult = {
     nodes: {
-      Sphere: THREE.Mesh
+      Sphere001: THREE.Mesh
     }
     materials: {
       snow_01: THREE.MeshStandardMaterial
@@ -28,7 +28,7 @@
 
 <Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
-    <SheetObject key="Snohaug1" props={{ scale: 1, opacity: 1, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: -0.101, positionz: 0, }} let:values>
+    <SheetObject key="Snohaug1" props={{ scale: 1, opacity: 1, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: -0.103, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  
         rotation.x={values.rotationx} 
         rotation.y={values.rotationy} 
@@ -46,12 +46,13 @@
       {:then gltf}
         <T.Group>
           <T.Mesh 
-          geometry={gltf.nodes.Sphere.geometry} 
+          geometry={gltf.nodes.Sphere001.geometry} 
           material={gltf.materials.snow_01}
           material.opacity={values.opacity}
           material.transparent
           rotation={[Math.PI / 2, 0, 2]} 
-          scale={[0.27, 0.27, 0.1]} 
+          scale={[0.27, 0.27, 0.1]}
+          receiveShadow
           />
         </T.Group>
       {:catch error}

@@ -67,8 +67,8 @@
     autoRotate={false}
     autoRotateSpeed={0.1}
     zoomSpeed={zoomSpeed}
-    target={[0, -0.02, 0]}
-    maxPolarAngle={1.5}
+    target={[0, 0, 0]}
+    maxPolarAngle={1.4}
     minPolarAngle={0}
   />
   
@@ -81,9 +81,11 @@
       </T.Mesh>
     </Mask>
   </T.Group> -->
-  
-  <BackgroundCircles/>
 
+  <BackgroundCircles
+  />
+
+  
 </T.PerspectiveCamera>
 
 <!-- <Environment 
@@ -92,19 +94,21 @@
 
 <T.DirectionalLight 
   intensity={7} 
-  position={[0.5, 0.5, 0.5]}
+  position={[5, 4, 5]}
+  castShadow
 />
 
 <T.AmbientLight 
   intensity={1.66} 
   position={[0.5, 0.5, 0.5]}
+  castShadow
 />
 
 <ContactShadows
   scale={10}
-  blur={20}
-  far={1}
-  opacity={1}
+  blur={1}
+  far={0.5}
+  opacity={0.5}
 />
 
 <!-- <T.Mesh
@@ -124,10 +128,14 @@
 
 <Snohaug
   interactive
+  recieveShadow
 />
+
+
 
 <Snohaug2
   interactive
+  recieveShadow
 />
 
 <!-- 
@@ -139,6 +147,7 @@
 
 <Spark 
   interactive
+  castShadow
 />
 
 <!-- Bruker Sveltes await-block for å laste teksturen -->
