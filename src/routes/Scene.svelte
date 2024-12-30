@@ -99,7 +99,7 @@
 />
 
 <T.AmbientLight 
-  intensity={1.66} 
+  intensity={2.66} 
   position={[0.5, 0.5, 0.5]}
   castShadow
 />
@@ -131,12 +131,11 @@
   recieveShadow
 />
 
-
-
 <Snohaug2
   interactive
   recieveShadow
 />
+
 
 <!-- 
 <Snohaug

@@ -35,7 +35,6 @@
         position.x={values.positionx} 
         position.y={values.positiony} 
         position.z={values.positionz} 
-        opacity={values.opacity}
         scale={[values.scale, values.scale, values.scale]} 
         bind:this={$component}
       >
