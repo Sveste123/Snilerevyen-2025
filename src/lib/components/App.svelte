@@ -4,7 +4,7 @@
   import Scene from '../../routes/Scene.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  import { Loading } from '/Users/root/source/Snilerevyen 2025/src/routes/loadingStore';
+  import { Loading } from '/src/routes/loadingStore';
 
   import { onDestroy } from 'svelte';
 
