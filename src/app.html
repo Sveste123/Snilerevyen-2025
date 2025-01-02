@@ -33,27 +33,48 @@
 			pointer-events: none; /* Ensures it doesn't block interactions with the canvas */
 			z-index: 2; /* Make sure it's on top of the canvas */
 		}
-		.overlay2 {
+		.scrollhand {
 			display: flex;
-			position: absolute;
+			position: fixed;
 			left: 0px;
-			top: 6px;
 			justify-content: center; /* Sentrer horisontalt */
 			align-items: center; /* Sentrer vertikalt */
 			width: 100%;
-			height: 100%; /* Fyll hele høyden av visningsporten */
+			height: 50%; /* Fyll hele høyden av visningsporten */
 			pointer-events: none; /* Ensures it doesn't block interactions with the canvas */
+			z-index: 1200;
+		}
+		.scrollhand:hover {
+			opacity: 0;
+		}
+		.scrollhand {
+			position: fixed;
+			left: 48%;
+			top: 75%;
+			width: auto;
+			height: auto;
+			max-height: 10%;
+			z-index: 1200;
+			pointer-events: none;
+			animation: moveSideToSide 1.5s infinite ease-in-out; /* Add side-to-side animation */
+    		opacity: 1; /* Base opacity */
+		}
+		@keyframes moveSideToSide {
+			0%, 100% {
+				transform: translate(-50%, -50%) translateX(15px); /* Center */
+			}
+			50% {
+				transform: translate(-50%, -50%) translateX(60px); /* Move slightly right */
+			}
+		}
+		.overlay img {
+			position: absolute;
+			width: auto;
+			height: auto;
+			max-width: 300%;
+			max-height: 300%;
 			z-index: 1;
 		}
-
-		.overlay img {
-				position: absolute;
-				width: auto;
-				height: auto;
-				max-width: 300%;
-				max-height: 300%;
-				z-index: 1;
-			}
 		@media (max-width: 700px) {
 			.overlay img {
 				width: auto;
@@ -120,26 +141,20 @@
 	
 		/* Responsive Container */
 		.page-container {
-			max-width: 700px;
 			margin: 1px auto;
 			padding: 5px;
-			background: #717cff;
-			border-radius: 8px;
 			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 		}
-	
-	
-		/* Program */
-		/* .container {
-			max-width: 100%;
-			height: 100%;
-			margin: 50px auto;
-			background-color: #717cff;
-			padding: 20px;
-			border-radius: 8px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-			text-align: left;
-		} */
+
+		.fixed-page-container {
+			position: fixed;
+			left: 50%;
+			top: 20%;
+			transform: translate(-50%, -50%) rotate(0deg);
+			width: 100%;
+			overflow: hidden;
+		}
+
 		h1 {
 			text-align: center;
 			color: white;
@@ -149,6 +164,7 @@
 	
 		/* Fremhevede avsnitt */
 		p {
+			text-align: center;
 			font-size: 1.4em;
 			color: #FFD700;
 			margin-bottom: 0px;
@@ -172,7 +188,6 @@
 			border-radius: 8px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			font-size: 1.2em;
-			pointer-events: none; /* Gjør det ikke-klikkbart */
 		}
 	
 		ul li:hover {
@@ -182,20 +197,166 @@
 		/* Media Query for Narrow Screens */
 		@media (max-width: 1000px) {
 			.top-menu {
-			/* flex-direction: column; */
-			position: fixed;
-			width: 100%;
-			top: 0%;
+				display: flex;
+				flex-wrap: wrap; /* Gjør at elementene brytes til ny linje */
+				position: fixed;
+				width: 100%;
+				top: 0;
+				background: #717cff; /* Valgfritt, for tydelig separasjon */
 			}
 			.top-menu a {
-			margin: 5px;
-			font-size: 16px;
+				margin: 2px;
+				font-size: 16px;
+				text-align: center; /* Sentraliser teksten */
 			}
-			.page-container {
-			padding: 10px;
+			/* Første rad: de tre første elementene */
+			.top-menu a:nth-child(-n+3) {
+				flex: 1 1 27%; /* Del linjen i tre like deler */
 			}
+			/* Andre rad: de fire siste elementene */
+			.top-menu a:nth-child(n+4) {
+				flex: 1 1 20%; /* Del linjen i fire like deler */
+			}
+			.page-container h1 {
+				font-size: 22px;
+				margin: 0;
+			}
+			.page-container p {
+				font-size: 19px;
+				margin: 0;
+			}
+			.fixed-page-container {
+				top: 25%;
+			}
+			.left-button {
+				top: 30px;
+				right: 105px;
+				z-index: 1100;
+			}
+
+			.right-button {
+				top: 30px;
+				left: 105px;
+				z-index: 1100;
+			}
+
 		}
-	
+		/* Konseptvideo */
+		.video-container {
+			position: fixed; /* Fikser boksen slik at den alltid er på skjermen */
+			top: 50%; /* Plasserer senter i høyden */
+			left: 50%; /* Plasserer senter i bredden */
+			transform: translate(-50%, -50%); /* Flytter elementet tilbake for perfekt sentrering */
+			width: 80%; /* Responsiv bredde */
+			max-width: 700px; /* Maks bredde for større skjermer */
+			height: 50%; /* Holder høyden proporsjonal */
+			border: 4px solid white;
+			border-radius: 40px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			z-index: 1000; /* Sørg for at det er over alt annet */
+		}
+
+		iframe {
+			width: 100%;
+			height: 50vh; /* Responsiv høyde */
+			border: none;
+		}
+		
+		.youtube-scroller {
+			position: fixed; /* Fikser boksen slik at den alltid er på skjermen */
+			top: 60%; /* Plasserer senter i høyden */
+			left: 50%; /* Plasserer senter i bredden */
+			transform: translate(-50%, -50%); /* Flytter elementet tilbake for perfekt sentrering */
+			width: 80%; /* Responsiv bredde */
+			max-width: 700px; /* Maks bredde for større skjermer */
+			height: 50%; /* Holder høyden proporsjonal */
+			border: 4px solid white;
+			border-radius: 40px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			display: flex;
+			z-index: 1000; /* Sørg for at det er over alt annet */
+			overflow-x: scroll; /* Gjør det mulig å scrolle horisontalt */
+			scroll-snap-type: x mandatory; /* Aktiverer scroll-snap-effekt */
+			gap: 10px; /* Mellomrom mellom videoer */
+
+		}
+
+		.youtube-item {
+			flex: 0 0 100%; /* Sørger for at én video tar hele bredden */
+			scroll-snap-align: center; /* Plasserer videoen i senter ved scrolling */
+			border-radius: 40px; /* Matcher kantene til scroller */
+			overflow: hidden; /* Hindrer innholdet i å stikke ut */
+			box-shadow: none; /* Fjern eventuell skygge her for å unngå dobbel effekt */
+			background: transparent; /* Gjør bakgrunnen usynlig for å vise kantene til scroller */
+		}
+
+		.youtube-item iframe {
+			display: block; /* Fjerner inline-padding/margin */
+			width: 100%; /* Fyll hele bredden */
+			height: 50vh; /* Responsiv høyde */
+			border: none; /* Sørger for at ingen kantlinje vises */
+			margin: 0; /* Fjern standard margin */
+			padding: 0; /* Fjern standard padding */
+		}
+
+		/* Skjul horisontal scrollbar (valgfritt) */
+		.youtube-scroller::-webkit-scrollbar {
+			display: none;
+		}
+		.youtube-scroller {
+			-ms-overflow-style: none; /* Internet Explorer 10+ */
+			scrollbar-width: none; /* Firefox */
+		}
+
+		.youtube-scroller-container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.scroll-button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1100;
+			background-color: rgba(255, 255, 255, 0.8);
+			border: none;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			font-size: 24px;
+			font-weight: bold;
+			color: #717cff;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.scroll-button:hover {
+			background-color: #FFD700;
+			color: white;
+		}
+
+		.left-button {
+			top: 30px;
+			right: 400px;
+			z-index: 1100;
+		}
+
+		.right-button {
+			top: 30px;
+			left: 400px;
+			z-index: 1100;
+		}
+
+
 	</style>
 	<body class="app", data-sveltekit-preload-data="hover">
 		<div class="app">%sveltekit.body%</div>

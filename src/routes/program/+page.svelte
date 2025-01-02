@@ -1,5 +1,5 @@
 <div class="page-container">
-    <h1>Program</h1>
+    <h1>Forestillinger</h1>
     <p><strong>Premiere:</strong> 3. Januar</p>
     <p><strong>Forestillingene spilles i Aulaen på Lillestrøm VGS disse datoene:</strong></p>
     <ul>
