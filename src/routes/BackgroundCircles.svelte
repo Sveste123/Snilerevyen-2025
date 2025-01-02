@@ -1,5 +1,5 @@
 <script lang="ts">
-  import state from '/src/routes/universalState.json';
+  import state from '/src/routes/FRESHuniversalState.json';
   import { T } from '@threlte/core';
   import type * as THREE from 'three';
   import { type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core';

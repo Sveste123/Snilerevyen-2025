@@ -1,5 +1,5 @@
 <script lang="ts">
-  import state from '/src/routes/universalState.json'
+  import state from '/src/routes/FRESHuniversalState.json'
   import type * as THREE from 'three'
   import { Group } from 'three'
   import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core'

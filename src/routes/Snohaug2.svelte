@@ -1,63 +1,90 @@
 <script lang="ts">
-  import state from '/src/routes/universalState.json'
-  import type * as THREE from 'three'
-  import { Group } from 'three'
-  import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core'
-  import { useGltf } from '@threlte/extras'
-  import { Theatre, SheetObject, Sequence } from '@threlte/theatre'
+  import state from '/src/routes/FRESHuniversalState.json';
+  import type * as THREE from 'three';
+  import { Group } from 'three';
+  import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core';
+  import { useGltf } from '@threlte/extras';
+  import { Theatre, SheetObject, Sequence } from '@threlte/theatre';
+  import { createEventDispatcher } from 'svelte';
 
-  type $$Props = Props<THREE.Group>
-  type $$Events = Events<THREE.Group>
-  type $$Slots = Slots<THREE.Group> & { fallback: {}; error: { error: any } }
+  type $$Props = Props<THREE.Group>;
+  type $$Events = Events<THREE.Group>;
+  type $$Slots = Slots<THREE.Group> & { fallback: {}; error: { error: any } };
 
-  export const ref = new Group()
+  export const ref = new Group();
 
   type GLTFResult = {
     nodes: {
-      Sphere001: THREE.Mesh
-    }
+      Sphere001: THREE.Mesh;
+    };
     materials: {
-      snow_02: THREE.MeshStandardMaterial
+      snow_02: THREE.MeshStandardMaterial;
+    };
+  };
+
+  const gltf = useGltf<GLTFResult>('/models/Snohaug2.glb');
+  const component = forwardEventHandlers();
+
+  const dispatch = createEventDispatcher();
+  let modelLoaded = false;
+
+  $: {
+    // Når `gltf` er ferdig lastet, sett `modelLoaded` til true
+    if (gltf) {
+      modelLoaded = true;
+      dispatch('loaded'); // Avfyr en hendelse for å informere parent
     }
   }
-
-  const gltf = useGltf<GLTFResult>('/models/Snohaug2.glb')
-  const component = forwardEventHandlers()
 </script>
 
 <Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
-    <SheetObject key="Snohaug2" props={{ scale: 1, opacity: 1, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
-      <T is={ref} dispose={false} {...$$restProps}  
-        rotation.x={values.rotationx} 
-        rotation.y={values.rotationy} 
-        rotation.z={values.rotationz} 
-        position.x={values.positionx} 
-        position.y={values.positiony} 
-        position.z={values.positionz} 
-        scale={[values.scale, values.scale, values.scale]} 
+    <SheetObject
+      key="Snohaug2"
+      props={{
+        scale: 1,
+        opacity: 1,
+        rotationx: 0,
+        rotationy: 0,
+        rotationz: 0,
+        positionx: 0,
+        positiony: 0,
+        positionz: 0,
+      }}
+      let:values
+    >
+      <T
+        is={ref}
+        dispose={false}
+        {...$$restProps}
+        rotation.x={values.rotationx}
+        rotation.y={values.rotationy}
+        rotation.z={values.rotationz}
+        position.x={values.positionx}
+        position.y={values.positiony}
+        position.z={values.positionz}
+        scale={[values.scale, values.scale, values.scale]}
         bind:this={$component}
       >
+        {#await gltf}
+          <slot name="fallback" />
+        {:then gltf}
+          <T.Group>
+            <T.Mesh
+              geometry={gltf.nodes.Sphere001.geometry}
+              material={gltf.materials.snow_02}
+              material.opacity={values.opacity}
+              material.transparent
+              rotation={[Math.PI / 2, 0, 2]}
+              scale={[0.27, 0.27, 0.1]}
+              receiveShadow
+            />
+          </T.Group>
+        {:catch error}
+          <slot name="error" {error} />
+        {/await}
 
-      {#await gltf}
-        <slot name="fallback" />
-      {:then gltf}
-        <T.Group>
-          <T.Mesh 
-          geometry={gltf.nodes.Sphere001.geometry} 
-          material={gltf.materials.snow_02}
-          material.opacity={values.opacity}
-          material.transparent
-          rotation={[Math.PI / 2, 0, 2]} 
-          scale={[0.27, 0.27, 0.1]} 
-          receiveShadow
-          />
-        </T.Group>
-      {:catch error}
-        <slot name="error" {error} />
-      {/await}
-    
-      <slot {ref} />
+        <slot {ref} />
       </T>
     </SheetObject>
   </Sequence>
