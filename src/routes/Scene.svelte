@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Canvas, T, useTask } from '@threlte/core'
+  import { T, useTask } from '@threlte/core'
   import { Text3DGeometry, ContactShadows, Float, Grid, OrbitControls, Gizmo, TrackballControls, Mask, useMask, MeshLineGeometry, MeshLineMaterial } from '@threlte/extras'
   import * as Extra from '@threlte/extras'
 	import { BoxGeometry, Group, MeshBasicMaterial } from 'three';
@@ -36,17 +36,6 @@
   $: cameraProps = $isSmallScreen
     ? { fov: 55, position: [0, 0.1, 0.4] } // Small screen
     : { fov: 55, position: [0, 0.1, 0.3] }; // Large screen
-
-  //LOADER
-  import { createEventDispatcher } from 'svelte';
-
-  const dispatch = createEventDispatcher();
-  let sceneLoaded = false;
-
-  function handleModelLoaded() {
-    sceneLoaded = true;
-    dispatch('loaded'); // Informer parent om at scenen er ferdig lastet
-  };
 
 </script>
 
@@ -102,7 +91,6 @@
 />
 
 <Snohaug2 
-  on:loaded={handleModelLoaded}
   interactive
   recieveShadow
 />

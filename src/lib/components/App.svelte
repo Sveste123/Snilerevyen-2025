@@ -4,28 +4,27 @@
   import Scene from '../../routes/Scene.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  let isLoading = true; // Tilstand for å spore lasting
-  // Når scenen er ferdig lastet
-  function handleSceneLoaded() {
-    isLoading = false;
-  }
+  import { Loading } from '/Users/root/source/Snilerevyen 2025/src/routes/loadingStore';
 
+  import { onDestroy } from 'svelte';
+
+  let isLoading = true;
+
+  // Abonner på Loading fra store
+  const unsubscribe = Loading.subscribe((value) => {
+    isLoading = value;
+    console.log(value);
+  });
+
+  onDestroy(() => {
+    unsubscribe(); // Rydd opp når komponenten blir ødelagt
+  });
 </script>
 
-<Canvas>
-    {#if !isLoading}
-      <div class="loading-screen">Laster inn scenen...</div>
-    {/if}
-  <Scene on:loaded={handleSceneLoaded} />
-</Canvas>
+{#if isLoading = false}
+<div class="loading-screen">Laster inn scenen...</div>
+{/if}
 
-<style>
-  .loading-screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-    color: white;
-  }
-</style>
+<Canvas>
+  <Scene/>
+</Canvas>

@@ -5,7 +5,8 @@
   import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core';
   import { useGltf } from '@threlte/extras';
   import { Theatre, SheetObject, Sequence } from '@threlte/theatre';
-  import { createEventDispatcher } from 'svelte';
+  
+  import { Loading } from './loadingStore';
 
   type $$Props = Props<THREE.Group>;
   type $$Events = Events<THREE.Group>;
@@ -25,16 +26,16 @@
   const gltf = useGltf<GLTFResult>('/models/Snohaug2.glb');
   const component = forwardEventHandlers();
 
-  const dispatch = createEventDispatcher();
-  let modelLoaded = false;
-
   $: {
     // Når `gltf` er ferdig lastet, sett `modelLoaded` til true
     if (gltf) {
-      modelLoaded = true;
-      dispatch('loaded'); // Avfyr en hendelse for å informere parent
+      Loading.set(false);
+      console.log("GLTF IS LOADED (Object)")
     }
   }
+
+  //svelte-store
+
 </script>
 
 <Theatre config={{ state: state }} studio={{ hide: true }}>
