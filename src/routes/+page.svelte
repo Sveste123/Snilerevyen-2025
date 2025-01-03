@@ -19,5 +19,5 @@
 </div>
 
 {#if showIndicator}
-  <img class="scrollhand" src="/scrollhand.png"/>
+  <img alt="finger" class="scrollhand" src="/scrollhand.png"/>
 {/if}

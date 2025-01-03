@@ -206,7 +206,7 @@
 			cursor: pointer;
 		}
 		/* Media Query for Narrow Screens */
-		@media (max-width: 1000px) {
+		@media (max-width: 610px) {
 			.top-menu {
 				display: flex;
 				flex-wrap: wrap; /* Gjør at elementene brytes til ny linje */
@@ -312,6 +312,15 @@
 			border: none; /* Sørger for at ingen kantlinje vises */
 			margin: 0; /* Fjern standard margin */
 			padding: 0; /* Fjern standard padding */
+		}
+		.cover-item-nedtelling {
+			display: flex; /* Fjerner inline-padding/margin */
+			width: 100%; /* Fyll hele bredden */
+			height: 60vh; /* Responsiv høyde */
+			border: none; /* Sørger for at ingen kantlinje vises */
+			margin: 0; /* Fjern standard margin */
+			padding: 0; /* Fjern standard padding */
+			justify-content: center;
 		}
 		.snilerevyen-instagram {
 			display: flex; /* Fjerner inline-padding/margin */

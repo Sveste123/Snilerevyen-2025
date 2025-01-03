@@ -104,11 +104,11 @@
             </a>
         </div>
 
---------------------
 
+        
         <div class="insta-item">
             <a href="https://www.instagram.com/p/DEVGHuENbVS/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="1" src="/nedtelling1.jpg"
                     />
                 </div>
@@ -116,7 +116,7 @@
         </div>
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DESTOHItuEA/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="2" src="/nedtelling2.jpg"
                     />
                 </div>
@@ -124,7 +124,7 @@
         </div>        
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DEPaBy8tAYO/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="3" src="/nedtelling3.jpg"
                     />
                 </div>
@@ -132,7 +132,7 @@
         </div>        
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DEM7uRotzaL/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="4" src="/nedtelling4.jpg"
                     />
                 </div>
@@ -140,7 +140,7 @@
         </div>        
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DEKiB6pNwnu/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="5" src="/nedtelling5.jpg"
                     />
                 </div>
@@ -148,7 +148,7 @@
         </div>        
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DEH7AO3tA-7/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="6" src="/nedtelling6.jpg"
                     />
                 </div>
@@ -156,7 +156,7 @@
         </div>        
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DEE-5nhtE_w/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="7" src="/nedtelling7.jpg"
                     />
                 </div>
@@ -164,7 +164,7 @@
         </div>        
         <div class="insta-item">
             <a href="https://www.instagram.com/snilerevyen/p/DECuDMSNxBm/">
-                <div class="cover-item">
+                <div class="cover-item-nedtelling">
                     <img alt="8" src="/nedtelling8.jpg"
                     />
                 </div>
