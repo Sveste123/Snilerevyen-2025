@@ -48,12 +48,10 @@
 
 <div class="insta-scroller-tag" on:scroll={showIndicatorFalse}>
     <div class="insta-item-tag">
-        <a href="https://www.instagram.com/p/DEVN2_HtYLZ/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==">
             <div class="snilerevyen-instagram">
                 <img alt="1" src="/snilerevyen-instagram.png"
                 />
             </div>
-        </a>
     </div>
 </div>
 
