@@ -5,12 +5,12 @@
 
 <div class="top-menu">
     <a href="./">Startside</a>
-    <a href="./program">Forestillinger</a>
-    <a href="./konseptvideo">Konseptvideo</a>
-    <a href="https://bestill.albillett.no/1541" target="_blank">Billetter</a>
-    <a href="./om-oss">Om oss</a>
+    <a href="./forestillinger">Forestillinger</a>
+    <!-- <a href="./konseptvideo">Konseptvideo</a> -->
     <a href="./kontakt">Kontakt</a>
-    <a href="./morro">Morro</a>
+    <a href="./om-oss">Om oss</a>
+    <a href="https://bestill.albillett.no/1541" target="_blank">Billetter</a>
+    <a href="./some">SoMe</a>
 </div>
 
 <div class="page-container">

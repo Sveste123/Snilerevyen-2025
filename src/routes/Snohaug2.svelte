@@ -5,8 +5,8 @@
   import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core';
   import { useGltf } from '@threlte/extras';
   import { Theatre, SheetObject, Sequence } from '@threlte/theatre';
-  
-  import { Loading } from './loadingStore';
+
+  import { loading } from '/src/loadingStore';
 
   type $$Props = Props<THREE.Group>;
   type $$Events = Events<THREE.Group>;
@@ -23,14 +23,23 @@
     };
   };
 
-  const gltf = useGltf<GLTFResult>('/models/Snohaug2.glb');
+  var gltf = null;
+  async function loadScene(): Promise<GLTFResult> {
+    console.log("Loading snøhaug");
+    var gltf = await useGltf<GLTFResult>('/models/Snohaug2.glb');
+    $loading = 0;
+    console.log("Loaded snøhaug");
+    return gltf;
+  }
+
   const component = forwardEventHandlers();
+  $loading = 1 ;
 
   $: {
     // Når `gltf` er ferdig lastet, sett `modelLoaded` til true
     if (gltf) {
-      Loading.set(false);
-      console.log("GLTF IS LOADED (Object)")
+      console.log("GLTF IS LOADED (Object)");
+      console.log("loading:", loading);
     }
   }
 
@@ -67,7 +76,7 @@
         scale={[values.scale, values.scale, values.scale]}
         bind:this={$component}
       >
-        {#await gltf}
+        {#await loadScene}
           <slot name="fallback" />
         {:then gltf}
           <T.Group>

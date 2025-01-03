@@ -4,25 +4,12 @@
   import Scene from '../../routes/Scene.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  import { Loading } from '/src/routes/loadingStore';
+  import { loading } from '/src/loadingStore';
 
-  import { onDestroy } from 'svelte';
-
-  let isLoading = true;
-
-  // Abonner på Loading fra store
-  const unsubscribe = Loading.subscribe((value) => {
-    isLoading = value;
-    console.log(value);
-  });
-
-  onDestroy(() => {
-    unsubscribe(); // Rydd opp når komponenten blir ødelagt
-  });
 </script>
 
-{#if isLoading = false}
-<div class="loading-screen">Laster inn scenen...</div>
+{#if $loading == 1}
+  <div class="loading-screen">Laster inn scenen...</div>
 {/if}
 
 <Canvas>
