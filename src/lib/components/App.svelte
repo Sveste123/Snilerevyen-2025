@@ -4,7 +4,7 @@
   import Scene from '../../routes/Scene.svelte'
   // import Renderer  from './Renderer.svelte'
 
-  import { loading } from '/src/loadingStore';
+  import { loading } from '/src/loadingStore.ts';
 
 </script>
 

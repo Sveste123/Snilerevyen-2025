@@ -1,43 +1,45 @@
 <script lang="ts">
-  import state from '/src/routes/FRESHuniversalState.json';
-  import type * as THREE from 'three';
-  import { Group } from 'three';
-  import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core';
-  import { useGltf } from '@threlte/extras';
-  import { Theatre, SheetObject, Sequence } from '@threlte/theatre';
+  import state from '/src/routes/FRESHuniversalState.json'
+  import type * as THREE from 'three'
+  import { Group } from 'three'
+  import { T, type Props, type Events, type Slots, forwardEventHandlers } from '@threlte/core'
+  import { useGltf } from '@threlte/extras'
+  import { Theatre, SheetObject, Sequence } from '@threlte/theatre'
 
   import { loading } from '/src/loadingStore';
 
-  type $$Props = Props<THREE.Group>;
-  type $$Events = Events<THREE.Group>;
-  type $$Slots = Slots<THREE.Group> & { fallback: {}; error: { error: any } };
+  type $$Props = Props<THREE.Group>
+  type $$Events = Events<THREE.Group>
+  type $$Slots = Slots<THREE.Group> & { fallback: {}; error: { error: any } }
 
-  export const ref = new Group();
+  export const ref = new Group()
 
   type GLTFResult = {
     nodes: {
-      Sphere001: THREE.Mesh;
+      Sphere001: THREE.Mesh
     };
     materials: {
-      snow_02: THREE.MeshStandardMaterial;
+      snow_02: THREE.MeshStandardMaterial
     };
   };
 
-  var gltf = null;
-  async function loadScene(): Promise<GLTFResult> {
-    console.log("Loading snøhaug");
-    var gltf = await useGltf<GLTFResult>('/models/Snohaug2.glb');
-    $loading = 0;
-    console.log("Loaded snøhaug");
-    return gltf;
-  }
+  const gltf = useGltf<GLTFResult>('/models/Snohaug2.glb')
+
+  // var gltf = null;
+  // async function loadScene(): Promise<GLTFResult> {
+  //   console.log("Loading snøhaug");
+  //   var gltf = await useGltf<GLTFResult>('/models/Snohaug2.glb');
+  //   $loading = 0;
+  //   console.log("Loaded snøhaug");
+  //   return gltf;
+  // }
 
   const component = forwardEventHandlers();
-  $loading = 1 ;
 
   $: {
-    // Når `gltf` er ferdig lastet, sett `modelLoaded` til true
+    // Når `gltf` er ferdig lastet, sett `loading` til 0
     if (gltf) {
+      $loading = 0 ;
       console.log("GLTF IS LOADED (Object)");
       console.log("loading:", loading);
     }
@@ -76,7 +78,7 @@
         scale={[values.scale, values.scale, values.scale]}
         bind:this={$component}
       >
-        {#await loadScene}
+        {#await gltf}
           <slot name="fallback" />
         {:then gltf}
           <T.Group>
