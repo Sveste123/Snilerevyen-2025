@@ -61,6 +61,16 @@
     {/if}
     <button class="scroll-button left-button" aria-label="Scroll left" on:click={previousButton}>&#9664;</button>
     <div class="insta-scroller" on:scroll={showIndicatorFalse}>
+
+        <div class="insta-item">
+            <a href="https://www.instagram.com/snilerevyen/reel/DEdFHiPsmzv/">
+                <div class="cover-item-nedtelling">
+                    <img alt="1" src="/sofakos.jpg"
+                    />
+                </div>
+            </a>
+        </div>
+
         <div class="insta-item">
             <a href="https://www.instagram.com/p/DEVN2_HtYLZ/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==">
                 <div class="cover-item">
