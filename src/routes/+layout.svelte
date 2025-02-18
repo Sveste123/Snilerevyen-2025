@@ -4,18 +4,19 @@
 </script>
 
 <div class="top-menu">
-    <a href="./">Startside</a>
-    <a href="./forestillinger">Forestillinger</a>
+    <!-- <a href="./">Startside</a> -->
+    <a href="./konserter">Konserter</a>
     <!-- <a href="./konseptvideo">Konseptvideo</a> -->
-    <a href="./kontakt">Kontakt</a>
+    <!-- <a href="./kontakt">Kontakt</a> -->
     <a href="./om-oss">Om oss</a>
-    <a href="https://bestill.albillett.no/1541" target="_blank">Billetter</a>
+    <a href="./billetter">Billetter</a>
     <a href="./some">SoMe</a>
 </div>
 
 <div class="page-container">
     <slot />
 </div>
+
 <div class="watermark">
-    Alle rettigheter tilhører © Snilerevyen | Org.nr. 916 144 989
+    Alle rettigheter tilhører © Festivalente | Org.nr. xxx xxx xxx
 </div>
